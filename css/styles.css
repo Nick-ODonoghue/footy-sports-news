@@ -45,27 +45,19 @@ body {
 .main {
     border: 1px solid green;
     padding: 5px;
-    /* height: 80vh; */
     display: grid;
     gap: 20px;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr;
-    /* grid-template-areas:
-        "content-lg content-lg content-side"
-        "content-lg content-lg content-side"
-        "content-lg content-lg content-side"
-        "content-bottom content-bottom content-side"
-        "content-footer content-footer content-footer"; */
-    /* align-content: start; */
+    /* grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr; */
 }
 
-.grid__row-span-2 {
+/* .grid__row-span-2 {
     grid-row: span 2;
 }
 
 .grid__col-span-2 {
     grid-column: span 2;
-}
+} */
 
 .content-lg,
 .content-side,
@@ -75,31 +67,23 @@ body {
 }
 
 .content-lg {
-    /* grid-area: content-lg; */
     height: 100%;
     background-color: white;
-    /* width: 100%; */
 }
 
 .content-side {
-    /* grid-area: content-side; */
     height: 100%;
     background-color: white;
-    /* width: 100%; */
 }
 
 .content-bottom {
-    /* grid-area: content-bottom; */
     height: 100%;
     background-color: white;
-    /* width: 100%; */
 }
 
 .content-footer {
-    /* grid-area: content-footer; */
     font-size: 1em;
     height: 2.2rem;
     align-self: start;
     background-color: white;
-    /* width: 100%; */
 }
