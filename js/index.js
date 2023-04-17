@@ -20,7 +20,7 @@ async function getVideos() {
     const options = {
         method: 'get',
         headers: {
-            'X-RapidAPI-Key': '7243d8fe32msh19c59b5960c320fp1d4c19jsn9810bff971ca',
+            'X-RapidAPI-Key': '',
             'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
         }
     };

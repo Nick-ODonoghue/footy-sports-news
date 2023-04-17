@@ -8,9 +8,6 @@
 
 Enter any team name into the search box and get back a whole host of data and footballing information. Styled 'loosly' on sky sports news.
 
--   [API Github](https://github.com/lukePeavey/quotable) used.
--   [EndPoint](https://api.quotable.io/random) for reference.
-
 <br>
 
 ## Site To-Do
