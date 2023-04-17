@@ -8,3 +8,20 @@
 body {
     font-family: 'Titillium Web', sans-serif;
 }
+
+/* Utilities */
+
+.container {
+    width: min(100%, 144rem);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellowgreen;
+}
+
+/* Header */
+
+.header {
+    background-color: aqua;
+}
