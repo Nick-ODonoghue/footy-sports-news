@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
 
 :root {
+
     /* Fonts */
     --site-font: 'Titillium Web', sans-serif;
+
+    /* Colours */
+    --site-bg: #DFDEE3;
+    --yellow-gradient: linear-gradient(135deg, #F0DD3E, #F6EB3A);
+    --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
+    --blue: #050778;
 }
 
 body {
     font-family: 'Titillium Web', sans-serif;
+    background-color: var(--site-bg);
 }
 
 /* Utilities */
@@ -17,11 +25,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: yellowgreen;
 }
 
 /* Header */
 
 .header {
-    background-color: aqua;
+    background-image: var(--yellow-gradient);
+    margin-bottom: 1rem;
+}
+
+/* Search Section */
+
+.form {
+    border: 1px solid red;
+    margin-bottom: 1rem;
+}
+
+/* Main Section */
+.main {
+    border: 1px solid green;
+    display: grid;
 }
