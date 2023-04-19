@@ -12,7 +12,8 @@ search.addEventListener("submit", (e) => {
 
     // Call getVideos function and pass users team name as argument
     // getVideos(team);
-    getTeamData();
+    // getTeamData();
+    apiFootball()
 });
 
 // Function using `free-football-soccer-videos` to get back data on users team taking team as a parameter
@@ -72,3 +73,37 @@ function getVideos(team) {
 //         .then(data => console.log(data))
 //         .catch(error => console.error("error" + error))
 // }
+
+// Function using API-Football
+function apiFootball() {
+
+    const url = "https://api-football-v1.p.rapidapi.com/v3/leagues";
+
+    const request = new Request(url, {
+
+        method: 'get',
+        headers: {
+            'X-RapidAPI-Key': '',
+            'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+        }
+
+    })
+
+    fetch(request)
+        .then(response => response.json())
+        .then(data => {
+
+            const allLeagues = data.response
+
+            allLeagues.forEach(leagues => {
+
+                if (leagues.league.id === 39) {
+                    console.log(leagues.league.name)
+                }
+
+            })
+
+        })
+        .catch(error => console.error("error:" + error))
+
+}
