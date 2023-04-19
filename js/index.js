@@ -35,14 +35,21 @@ function getVideos(team) {
     fetch(request)
         .then(response => response.json())
 
-        // Itterating over data returned looking for users team
-        .then(data => {
-            data.forEach(game => {
-                if (game.side1.name === team || game.side2.name === team) {
-                    console.log(game)
-                }
-            })
-        })
+        // Itterate over data returned & grab all game.titles as well as their country code{id}
+        // .then(data => {
+        //     data.forEach(game => {
+        //         console.log(`${game.competition.id} - ${game.title}`)
+        //     })
+        // })
+
+        // Itterating over data returned looking for users team & return any games found
+        // .then(data => {
+        //     data.forEach(game => {
+        //         if (game.side1.name === team || game.side2.name === team) {
+        //             console.log(game)
+        //         }
+        //     })
+        // })
         .catch(error => console.error('error:' + error));
 
 }
