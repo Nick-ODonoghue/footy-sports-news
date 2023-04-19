@@ -48,8 +48,8 @@ body {
     display: grid;
     gap: 20px;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr;
-    height: 80vh;
+    grid-template-rows: 3fr 1fr;
+    height: 90vh;
 }
 
 .grid__row-span-2 {
@@ -85,6 +85,6 @@ body {
 .content-footer {
     font-size: 1em;
     height: 2.2rem;
-    align-self: start;
+    align-self: end;
     background-color: white;
 }
