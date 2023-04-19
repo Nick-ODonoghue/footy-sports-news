@@ -3,30 +3,36 @@ const search = document.getElementById("form");
 // console.log(search);
 
 // Add evenListener on form for a submit
-search.addEventListener("submit", (event) => {
+search.addEventListener("submit", (e) => {
     // Prevent submit page refresh
-    event.preventDefault();
+    e.preventDefault();
 
-    // Grab users team search
-    const team = event.currentTarget.input.value;
+    // Grab users input
+    const team = e.currentTarget.input.value;
     console.log(team);
     getVideos();
 });
 
-async function getVideos() {
+function getVideos() {
 
+    // Setting endpoint to url
     const url = "https://free-football-soccer-videos.p.rapidapi.com/";
 
-    const options = {
+    // Creating a new request
+    const request = new Request(url, {
+
         method: 'get',
         headers: {
             'X-RapidAPI-Key': '',
             'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
         }
-    };
 
-    fetch(url, options)
+    })
+
+    // Passing request to fetchAPI
+    fetch(request)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(error => console.error('error:' + error));
+
 }
