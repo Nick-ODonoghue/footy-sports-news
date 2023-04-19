@@ -47,17 +47,18 @@ body {
     padding: 5px;
     display: grid;
     gap: 20px;
-    /* grid-template-columns: 3fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr; */
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
+    height: 80vh;
 }
 
-/* .grid__row-span-2 {
+.grid__row-span-2 {
     grid-row: span 2;
 }
 
 .grid__col-span-2 {
     grid-column: span 2;
-} */
+}
 
 .content-lg,
 .content-side,

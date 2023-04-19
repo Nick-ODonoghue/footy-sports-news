@@ -11,10 +11,11 @@ search.addEventListener("submit", (e) => {
     const team = e.currentTarget.input.value;
 
     // Call getVideos function and pass users team name as argument
-    getVideos(team);
+    // getVideos(team);
+    getTeamData();
 });
 
-// Function to get back data on users team taking team as a parameter
+// Function using `free-football-soccer-videos` to get back data on users team taking team as a parameter
 function getVideos(team) {
 
     // Setting endpoint to url
@@ -51,5 +52,23 @@ function getVideos(team) {
         //     })
         // })
         .catch(error => console.error('error:' + error));
-
 }
+
+// Function using `football-data.org` API
+// function getTeamData() {
+//     const url = "https://api.football-data.org/v4/competitions/PL/";
+
+//     const request = new Request(url, {
+//         method: 'get',
+//         headers: {
+//             'X-Auth-Token': ''
+//         }
+
+//     });
+
+//     fetch(request)
+
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.error("error" + error))
+// }
