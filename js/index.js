@@ -1,6 +1,5 @@
-// Grab form element from DOM
-const search = document.getElementById("form");
-// console.log(search);
+// Grab elements from DOM
+const search = document.getElementById("form")
 
 // Add evenListener on form for a submit
 search.addEventListener("submit", (e) => {
@@ -11,8 +10,8 @@ search.addEventListener("submit", (e) => {
     const team = e.currentTarget.input.value;
 
     // Call getVideos function and pass users team name as argument
-    // getVideos(team);
-    // getTeamData();
+    // getVideos(team)
+    // getTeamData()
     apiFootball()
 });
 
@@ -20,7 +19,7 @@ search.addEventListener("submit", (e) => {
 function getVideos(team) {
 
     // Setting endpoint to url
-    const url = "https://free-football-soccer-videos.p.rapidapi.com/";
+    const url = "https://free-football-soccer-videos.p.rapidapi.com/"
 
     // Creating a new request instance
     const request = new Request(url, {
@@ -52,32 +51,13 @@ function getVideos(team) {
         //         }
         //     })
         // })
-        .catch(error => console.error('error:' + error));
+        .catch(error => console.error('error:' + error))
 }
-
-// Function using `football-data.org` API
-// function getTeamData() {
-//     const url = "https://api.football-data.org/v4/competitions/PL/";
-
-//     const request = new Request(url, {
-//         method: 'get',
-//         headers: {
-//             'X-Auth-Token': ''
-//         }
-
-//     });
-
-//     fetch(request)
-
-//         .then(response => response.json())
-//         .then(data => console.log(data))
-//         .catch(error => console.error("error" + error))
-// }
 
 // Function using API-Football
 function apiFootball() {
 
-    const url = "https://api-football-v1.p.rapidapi.com/v3/leagues";
+    const url = "https://api-football-v1.p.rapidapi.com/v3/leagues"
 
     const request = new Request(url, {
 
