@@ -12,7 +12,7 @@ search.addEventListener("submit", (e) => {
     // Call getVideos function and pass users team name as argument
     // getVideos(team)
     // getTeamData()
-    apiFootball()
+    teamData(team)
 });
 
 // Function using `free-football-soccer-videos` to get back data on users team taking team as a parameter
@@ -55,9 +55,9 @@ function getVideos(team) {
 }
 
 // Function using API-Football
-function apiFootball() {
+function teamData(team) {
 
-    const url = "https://api-football-v1.p.rapidapi.com/v3/leagues"
+    const url = `https://api-football-v1.p.rapidapi.com/v3/teams?name=${team}`
 
     const request = new Request(url, {
 
@@ -72,18 +72,33 @@ function apiFootball() {
     fetch(request)
         .then(response => response.json())
         .then(data => {
+            const dataResponse = data.response
 
-            const allLeagues = data.response
+            // Loop through dataResponse incase more than one team is returned
+            dataResponse.forEach(teams => {
+                // Grab needed data
+                const teamLogo = teams.team.logo
+                const teamName = teams.team.name
+                const teamId = teams.team.id
 
-            allLeagues.forEach(leagues => {
-
-                if (leagues.league.id === 39) {
-                    console.log(leagues.league.name)
-                }
-
+                // Call setImage function and pass it the logo URL
+                setImage(teamLogo)
+                console.log(teamId, teamName)
             })
-
         })
         .catch(error => console.error("error:" + error))
+}
 
+// Function to inject team logo
+const setImage = (imgUrl) => {
+
+    // Grab DOM element
+    const contentLg = document.querySelector(".content-lg")
+    // Create new img element
+    const imgElement = document.createElement("img")
+
+    // Set new img elements src to logo URL passed in as an argument
+    imgElement.src = imgUrl
+    // Inject logo into html
+    contentLg.appendChild(imgElement)
 }
