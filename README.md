@@ -28,6 +28,10 @@ Enter any team name into the search box and get back a whole host of data and fo
 
 To be confirmed!
 
+-   CORS....
+-   API Proxy....
+-   Node.js....
+
 <br>
 
 ## Built with
@@ -45,7 +49,7 @@ To be confirmed!
 
 ## Site links
 
-[Footy Sports New](https://www.NickOD.xyz)
+[Footy Sports New](https://www.NickOD.xyz) - Coming soon
 
 <br>
 
@@ -57,7 +61,7 @@ To be confirmed!
 
 ## Author
 
--   My Website - [NickOD.xyz](http://www.NickOD.xyz) <em>COMIGN SOON</em>
+-   My Website - [NickOD.xyz](http://www.NickOD.xyz)
 -   My LinkedIn - [LinkedIn](https://www.linkedin.com/in/nick-odonoghue/)
 
 <br>
