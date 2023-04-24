@@ -3,16 +3,11 @@ require('dotenv').config()
 
 const API_KEY = process.env.API_KEY
 
-const getTeams = async (teamName) => {
+const getTeams = async () => {
   const options = {
     method: 'GET',
-    url: 'https://api-football-v1.p.rapidapi.com/v3/teams',
-    params: { name: teamName },
-    headers: {
-      'content-type': 'application/octet-stream',
-      'X-RapidAPI-Key': API_KEY,
-      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-    }
+    url: 'http://localhost:5555/team',
+    params: { name: 'arsenal' },
   }
 
   try {

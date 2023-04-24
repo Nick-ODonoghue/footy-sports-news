@@ -1,8 +1,6 @@
 // Grab elements from DOM
 const search = document.getElementById("form")
 
-const { GetTeams } = require('./GetTeam')
-
 // Add evenListener on form for a submit
 search.addEventListener("submit", (e) => {
 
