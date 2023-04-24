@@ -1,4 +1,7 @@
 const axios = require('axios')
+require('dotenv').config()
+
+const API_KEY = process.env.API_KEY
 
 const getTeams = async (teamName) => {
   const options = {
@@ -7,7 +10,7 @@ const getTeams = async (teamName) => {
     params: { name: teamName },
     headers: {
       'content-type': 'application/octet-stream',
-      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Key': API_KEY,
       'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
   }
