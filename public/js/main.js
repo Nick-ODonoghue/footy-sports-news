@@ -1,5 +1,8 @@
+import { getTeams } from './GetTeam.js'
+
 // Grab elements from DOM
 const search = document.getElementById("form")
+
 
 // Add evenListener on form for a submit
 search.addEventListener("submit", (e) => {
@@ -11,5 +14,5 @@ search.addEventListener("submit", (e) => {
   const teamName = e.currentTarget.input.value
 
   // Call GetTeams function and pass user input as argument
-  GetTeams(teamName)
+  getTeams(teamName)
 })

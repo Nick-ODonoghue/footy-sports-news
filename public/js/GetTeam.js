@@ -1,13 +1,9 @@
-const axios = require('axios')
-require('dotenv').config()
-
-const API_KEY = process.env.API_KEY
-
-const getTeams = async () => {
+// Front-end async funtion calling the backend and passing users team as a parametor
+export const getTeams = async (teamName) => {
   const options = {
     method: 'GET',
     url: 'http://localhost:5555/team',
-    params: { name: 'arsenal' },
+    params: { name: teamName },
   }
 
   try {
@@ -16,8 +12,4 @@ const getTeams = async () => {
   } catch (error) {
     console.error(error)
   }
-}
-
-module.exports = {
-  getTeams
 }
