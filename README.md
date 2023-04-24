@@ -8,61 +8,66 @@
 
 Enter any team name into the search box and get back a whole host of data and footballing information. Styled 'loosly' on sky sports news.
 
-<br>
+Using the [API-Football](https://www.api-football.com/) RESTful API and it's many endpoints.
 
-## Site To-Do
-
--   decide on data and information to be given
--   Style for mobile uses
--   Style for large screen users
--   Sections:
-    -   Header
-    -   Search Box
-    -   Main Content
-    -   Footer
--   API calls
+As I can't expose my API key in the frontend of my app, I've built a node.js backend server to handle the API calls. Routing the repsonse to my own local endpoints and then grabing the data stored locally to render into the app.
 
 <br>
 
-## What I learned
-
-To be confirmed!
-
--   CORS....
--   API Proxy....
--   Node.js....
-
-<br>
-
-## Built with
-
--   Mobile first workflow
-    -   Grid
-    -   Flexbox
--   Semantic HTML5 markup
-    -   BEM
--   CSS custom properties
--   JS
-    -   API fetch methods
-
-<br>
-
-## Site links
+## Live Site
 
 [Footy Sports New](https://www.NickOD.xyz) - Coming soon
 
 <br>
 
-## Useful resources
+## Sticking Points & What I learned
 
-[w3schools](https://www.w3schools.com/)
+- CORS
+
+  - CORS is a security feature in web browsers that prevents cross-origin requests. To make API calls from a web app to a different domain, so I created a backend server that acts as a proxy to the API server.
+
+- Node.js
+  - Having never used Node.js before I had fun reading and watching tutorials on how to set up the backend server within node. As well as learning about a few of it's dependencies like express, cors, dotenv and axios
+  - Implementing this has really helped me take some time to study and learn more about HTTP requests, how they work and how to apply them within my code.
+
+<br>
+
+## Site To-Do
+
+- decide on data and information to be given
+- Style for mobile uses
+- Style for large screen users
+- Sections:
+  - Header
+  - Search Box
+  - Main Content
+  - Footer
+- API calls
+
+<br>
+
+## Built with
+
+- Mobile first workflow
+  - Grid
+- Semantic HTML5 markup
+  - BEM
+- CSS custom properties
+- JS
+  - API fetch methods
 
 <br>
 
 ## Author
 
--   My Website - [NickOD.xyz](http://www.NickOD.xyz)
--   My LinkedIn - [LinkedIn](https://www.linkedin.com/in/nick-odonoghue/)
+- My Website - [NickOD.xyz](http://www.NickOD.xyz)
+- My LinkedIn - [LinkedIn](https://www.linkedin.com/in/nick-odonoghue/)
+
+<br>
+
+## Useful resources
+
+Coming SOON
 
 <br>
 
