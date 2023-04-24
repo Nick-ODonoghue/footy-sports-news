@@ -1,10 +1,11 @@
-// Grab packages
+// Backend server, to handle our routes and API calls keeping our API key safe from the frontend
+// Grab packages needed for the server
 const express = require('express')
 const cors = require('cors')
 const axios = require('axios')
 require('dotenv').config()
 
-// const { getTeams } = require('./public/js/GetTeam')
+// Store API key via dotenv package required above
 const API_KEY = process.env.API_KEY
 
 // Set port
@@ -12,14 +13,16 @@ const PORT = process.env.PORT || 5555
 
 const app = express()
 
-// Enable CORS
+// Enable CORS to prevent any issues
 app.use(cors())
 
 // Set up routes
+// Default route test
 app.get('/', (req, res) => {
   res.json('Hi')
 })
 
+// Set /team route to store our response from the API allowing the frontend getTeams function to pull the response data
 app.get('/team', async (req, res) => {
 
   const usersTeam = req.query.name
@@ -48,4 +51,5 @@ app.get('/team', async (req, res) => {
 
 })
 
+// Initiate the server to listen on our port
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))

@@ -1,3 +1,4 @@
+// Import getTeams function
 import { getTeams } from './GetTeam.js'
 
 // Grab elements from DOM
