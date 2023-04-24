@@ -1,0 +1,17 @@
+// Grab elements from DOM
+const search = document.getElementById("form")
+
+const { GetTeams } = require('./GetTeam')
+
+// Add evenListener on form for a submit
+search.addEventListener("submit", (e) => {
+
+  // Prevent submit page refresh
+  e.preventDefault()
+
+  // Grab users team name input
+  const teamName = e.currentTarget.input.value
+
+  // Call GetTeams function and pass user input as argument
+  GetTeams(teamName)
+})
