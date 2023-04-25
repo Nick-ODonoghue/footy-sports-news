@@ -11,6 +11,7 @@ const API_KEY = process.env.API_KEY
 // Set port
 const PORT = process.env.PORT || 5555
 
+// Innitiate our express server
 const app = express()
 
 // Enable CORS to prevent any issues
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 // Set /team route to store our response from the API allowing the frontend getTeams function to pull the response data
 app.get('/team', async (req, res) => {
 
+  // Grab the users input to pass into our params
   const usersTeam = req.query.name
 
   const options = {
@@ -40,7 +42,6 @@ app.get('/team', async (req, res) => {
 
   try {
     const apiRes = await axios.request(options)
-
     // Destructure response to get only the data needed
     const { response } = apiRes.data
     res.json(response)

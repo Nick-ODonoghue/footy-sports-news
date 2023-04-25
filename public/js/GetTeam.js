@@ -13,11 +13,11 @@ export const getTeams = async (teamName) => {
     console.log(response.data)
     // Grab the response data
     const dataResponse = response.data
+
     // Loop through the data
     dataResponse.forEach(teams => {
       // Grab the teams logo url
       const teamLogo = teams.team.logo
-
       // Pass the url to the setImage function
       setImage(teamLogo)
     })
@@ -28,7 +28,6 @@ export const getTeams = async (teamName) => {
 
 // Function to inject team logo
 const setImage = (imgUrl) => {
-
   // Grab DOM element
   const contentLg = document.querySelector(".table")
   // Create new img element
