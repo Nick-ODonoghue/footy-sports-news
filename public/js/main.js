@@ -1,5 +1,6 @@
 // Import getTeams function
-import { getTeams } from './GetTeam.js'
+import { getTeams } from './getTeam.js'
+import { getLeague } from './getLeague.js'
 // Grab elements from DOM
 const search = document.getElementById("form")
 

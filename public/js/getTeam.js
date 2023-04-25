@@ -1,31 +1,4 @@
-// Front-end async funtion calling the backend and passing users team as a parametor
-// export const getTeams = async (teamName) => {
-//   const options = {
-//     method: 'GET',
-//     // Function calling our backend URL route defined in our index.js
-//     url: 'http://localhost:5555/team',
-//     // Passing users input as a parametor
-//     params: { name: teamName },
-//   }
-
-//   try {
-//     const response = await axios.request(options)
-//     console.log(response.data)
-//     // Grab the response data
-//     const dataResponse = response.data
-
-//     // Loop through the data
-//     dataResponse.forEach(teams => {
-//       // Grab the teams logo url
-//       const teamLogo = teams.team.logo
-//       // Pass the url to the setImage function
-//       setImage(teamLogo)
-//     })
-//   } catch (error) {
-//     console.error(error)
-//   }
-// }
-
+import { getLeague } from './getLeague.js'
 // Front-end async funtion calling the backend and passing users team as a parametor
 export const getTeams = async (teamName) => {
   // Create a new instance of URL
@@ -38,6 +11,10 @@ export const getTeams = async (teamName) => {
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
     console.log(dataResponse)
+
+    // Grabbing team ID of users input and passing as an argument into getLeague function
+    const teamID = dataResponse[0].team.id
+    getLeague(teamID)
 
     // Loop through the data
     dataResponse.forEach((teams) => {

@@ -52,5 +52,31 @@ app.get('/team', async (req, res) => {
 
 })
 
+// Set /league route to store our response from the API allowing the frontend getLeague function to pull the response data
+app.get('/league', async (req, res) => {
+
+  // Grab query from the frontend function and pass as a param to the API call
+  const teamID = req.query.id
+
+  const options = {
+    method: 'GET',
+    url: 'https://api-football-v1.p.rapidapi.com/v3/leagues',
+    params: { team: teamID },
+    headers: {
+      'content-type': 'application/octet-stream',
+      'X-RapidAPI-Key': API_KEY,
+      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+    }
+  }
+
+  try {
+    const apiRes = await axios.request(options)
+    const { response } = apiRes.data
+    res.json(response)
+  } catch (error) {
+    console.error(error)
+  }
+})
+
 // Initiate the server to listen on our port
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
