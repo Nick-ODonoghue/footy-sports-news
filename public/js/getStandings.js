@@ -1,9 +1,8 @@
-import { getStandings } from './getStandings.js'
 // Front-end async funtion calling the backend and passing users teamID as a parametor
-export const getLeague = async (teamID) => {
-  const url = new URL('http://localhost:5555/league')
+export const getStandings = async (leagueID) => {
+  const url = new URL('http://localhost:5555/standings')
   // Append users team ID that was pulled from getTeams function dataResponse
-  url.searchParams.append('id', teamID)
+  url.searchParams.append('id', leagueID)
 
   try {
 
@@ -11,8 +10,13 @@ export const getLeague = async (teamID) => {
     const dataResponse = await response.json()
     console.log(dataResponse)
 
-    const leagueID = dataResponse[0].league.id
-    getStandings(leagueID)
+    const { league } = dataResponse[0]
+    const standings = league.standings
+    standings.forEach((teamObj) => {
+      teamObj.forEach((team) => {
+        console.log(team.form)
+      })
+    })
 
   } catch (error) {
     console.error(error)
