@@ -24,7 +24,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 - CORS
 
-  - CORS is a security feature in web browsers that prevents cross-origin requests. To make API calls from a web app to a different domain, so I created a backend server that acts as a proxy to the API server.
+  - CORS is a security feature in web browsers that prevents cross-origin requests. To make API calls from a web app to a different domain, I created a backend server that acts as a proxy to the API server.
 
 - Node.js
   - Having never used Node.js before I had fun reading and watching tutorials on how to set up the backend server within node. As well as learning about a few of it's dependencies like express, cors, dotenv and axios
@@ -34,7 +34,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Site To-Do
 
-- decide on data and information to be given
+- Decide on data and information to be displayed in the GUI
 - Style for mobile uses
 - Style for large screen users
 - Sections:
@@ -51,17 +51,22 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 - Mobile first workflow
   - Grid
 - Semantic HTML5 markup
-  - BEM
 - CSS custom properties
+  - BEM
 - JS
+  - Node.js
+    - Express
+    - Axios
+    - CORS
+    - Dotenv
   - API fetch methods
 
 <br>
 
 ## Author
 
-- My Website - [NickOD.xyz](http://www.NickOD.xyz)
-- My LinkedIn - [LinkedIn](https://www.linkedin.com/in/nick-odonoghue/)
+- Portfollio - [NickOD.xyz](http://www.NickOD.xyz)
+- LinkedIn - [LinkedIn](https://www.linkedin.com/in/nick-odonoghue/)
 
 <br>
 
