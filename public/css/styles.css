@@ -9,8 +9,8 @@
   --site-bg: #DFDEE3;
   --yellow-gradient: linear-gradient(135deg, #F0DD3E, #F6EB3A);
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
-  --blue-gradient: linear-gradient(135deg, #12367C, #002267);
-  --red-gradient: linear-gradient(135deg, #ED253A, #D50117)
+  --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
+  --red-gradient: linear-gradient(135deg, #f03548, #ca0014);
 }
 
 body {
@@ -88,4 +88,20 @@ button[type=submit] {
   padding: 1rem 1.4rem;
   margin: 8px 0;
   color: white;
+}
+
+/* Team Info */
+
+.team__logo {
+  width: 85px;
+  height: 85px;
+}
+
+.date {}
+
+.seconds {
+  font-size: 2rem;
+  color: black;
+  height: 100px;
+  width: 100px;
 }

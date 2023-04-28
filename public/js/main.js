@@ -1,6 +1,6 @@
 // Import getTeams function
 import { getTeams } from './getTeam.js'
-import { getLeague } from './getLeague.js'
+import { displayDate } from './getDate.js'
 // Grab elements from DOM
 const search = document.getElementById("form")
 
@@ -13,3 +13,5 @@ search.addEventListener("submit", (e) => {
   // Call GetTeams function and pass user input as argument
   getTeams(teamName)
 })
+
+setInterval(displayDate, 10)
