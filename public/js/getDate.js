@@ -37,7 +37,7 @@ export const displayDate = () => {
   }
 
   // Push dates & time
-  hourEl.innerHTML = `${hours}.`
+  hourEl.innerHTML = `${hours - 12}.`
   dayEl.innerHTML = day
   monthEl.innerHTML = month
   dayNumEl.innerHTML = dayNum
