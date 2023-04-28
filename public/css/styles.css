@@ -9,12 +9,13 @@
   --site-bg: #DFDEE3;
   --yellow-gradient: linear-gradient(135deg, #F0DD3E, #F6EB3A);
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
-  --blue: #050778;
+  --blue-gradient: linear-gradient(135deg, #12367C, #002267);
+  --red-gradient: linear-gradient(135deg, #ED253A, #D50117)
 }
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  background-color: var(--site-bg);
+  background-image: var(--site-bg);
 }
 
 /* Utilities */
@@ -30,13 +31,32 @@ body {
 /* Header */
 
 .header {
-  background-image: var(--yellow-gradient);
   margin-bottom: 1rem;
+}
+
+.title__container {
+  color: white;
+  font-weight: 600;
+  padding: .5rem 1rem;
+}
+
+.brand__text {
+  font-size: 4rem;
+}
+
+.brand__text--blue {
+  background-image: var(--blue-gradient);
+  width: 100%;
+}
+
+.brand__text--blue--align {
+  text-align: right;
+}
+
+.brand__text--red {
+  background-image: var(--red-gradient);
 }
 
 /* Search Section */
 
-.form {
-  border: 1px solid red;
-  margin-bottom: 1rem;
-}
+.form {}
