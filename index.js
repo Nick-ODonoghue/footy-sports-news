@@ -28,6 +28,7 @@ app.get('/team', async (req, res) => {
 
   // Grab the users input to pass into our params
   const usersTeam = req.query.name
+  console.log(`Team: ${usersTeam}`)
 
   const options = {
     method: 'GET',
@@ -57,7 +58,7 @@ app.get('/league', async (req, res) => {
 
   // Grab query from the frontend function and pass as a param to the API call
   const teamID = req.query.id
-  console.log(teamID)
+  console.log(`Team ID: ${teamID}`)
 
   const options = {
     method: 'GET',
@@ -84,7 +85,7 @@ app.get('/standings', async (req, res) => {
 
   // Grab query from the frontend function and pass as a param to the API call
   const leagueID = req.query.id
-  console.log(leagueID)
+  console.log(`League ID: ${leagueID}`)
 
   const options = {
     method: 'GET',

@@ -31,12 +31,12 @@ export const getTeams = async (teamName) => {
 // Function to inject team logo
 const setImage = (imgUrl) => {
   // Grab DOM element
-  const contentLg = document.querySelector(".table")
+  const logoSection = document.querySelector(".table")
   // Create new img element
   const imgElement = document.createElement("img")
 
   // Set new img elements src to logo URL passed in as an argument
   imgElement.src = imgUrl
   // Inject logo into html
-  contentLg.appendChild(imgElement)
+  logoSection.appendChild(imgElement)
 }
