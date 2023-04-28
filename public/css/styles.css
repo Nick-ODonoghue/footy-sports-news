@@ -6,7 +6,7 @@
   --site-font: 'Titillium Web', sans-serif;
 
   /* Colours */
-  --site-bg: #DFDEE3;
+  --site-bg: #eeeeee;
   --yellow-gradient: linear-gradient(135deg, #F0DD3E, #F6EB3A);
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
@@ -15,7 +15,7 @@
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  background-image: var(--site-bg);
+  background-color: var(--site-bg);
 }
 
 /* Utilities */
