@@ -14,10 +14,8 @@ export const getStandings = async (leagueID) => {
     const standings = league.standings
     standings.forEach((teamObj) => {
       teamObj.forEach((team) => {
-        const teamName = team.team.name
-        const teamForm = team.form
-        console.log(teamName, teamForm)
-        setTeamForm(teamName, teamForm)
+        setTeamForm(team)
+        leagueTable(team)
       })
     })
 
@@ -27,17 +25,21 @@ export const getStandings = async (leagueID) => {
 }
 
 // Function to inject team form data into HTML
-const setTeamForm = (teamName, teamForm) => {
+const setTeamForm = (teams) => {
   // Grab DOM element
   const teamFormSection = document.querySelector(".team__form")
 
+  // Extract the data needed from the team objects
+  const teamName = teams.team.name
+  const teamForm = teams.form
+
   // Create new elements & add classes
   const teamDivEl = document.createElement('div')
-  teamDivEl.classList.add('form__team')
+  teamDivEl.classList.add('team__form__container')
   const nameEl = document.createElement('h3')
-  nameEl.classList.add('form__team__name')
+  nameEl.classList.add('team__form__name')
   const formEl = document.createElement('p')
-  formEl.classList.add('form__team__form')
+  formEl.classList.add('team__form')
 
   // Pass new elements the data
   nameEl.innerHTML = teamName
@@ -49,4 +51,66 @@ const setTeamForm = (teamName, teamForm) => {
 
   // Inject new div's into the HTML
   teamFormSection.appendChild(teamDivEl)
+}
+
+// Function to create league tabel
+const leagueTable = (teams) => {
+  // Grab DOM element
+  const table = document.querySelector('.league__table')
+
+  // Extract data needed from teams parameter
+  const logo = teams.team.logo
+  const name = teams.team.name
+  const played = teams.all.played
+  const won = teams.all.win
+  const draw = teams.all.draw
+  const lost = teams.all.lose
+  const goalsFor = teams.all.goals.for
+  const goalsAgainst = teams.all.goals.against
+
+  // Create elements & add classes if needed
+  const leagueDivEl = document.createElement('div')
+  leagueDivEl.classList.add('league__container')
+  const teamDivEl = document.createElement('div')
+  teamDivEl.classList.add('league__team__container')
+  const teamLogoEl = document.createElement('img')
+  teamLogoEl.classList.add('league__team__logo')
+  const teamNameEl = document.createElement('h3')
+  teamNameEl.classList.add('league__team__name')
+  const teamPlayedEl = document.createElement('p')
+  teamPlayedEl.classList.add('league__team__text')
+  const teamWonEl = document.createElement('p')
+  teamWonEl.classList.add('league__team__text')
+  const teamdrawEl = document.createElement('p')
+  teamdrawEl.classList.add('league__team__text')
+  const teamlostEl = document.createElement('p')
+  teamlostEl.classList.add('league__team__text')
+  const teamGoalsForEl = document.createElement('p')
+  teamGoalsForEl.classList.add('league__team__text')
+  const teamGoalsAgainstEl = document.createElement('p')
+  teamGoalsAgainstEl.classList.add('league__team__text')
+
+  // Pass new elements data
+  teamLogoEl.src = logo
+  teamNameEl.innerHTML = name
+  teamPlayedEl.innerHTML = played
+  teamWonEl.innerHTML = won
+  teamdrawEl.innerHTML = draw
+  teamlostEl.innerHTML = lost
+  teamGoalsForEl.innerHTML = goalsFor
+  teamGoalsAgainstEl.innerHTML = goalsAgainst
+
+  // Inject elements into containers
+  teamDivEl.appendChild(teamLogoEl)
+  teamDivEl.appendChild(teamNameEl)
+  teamDivEl.appendChild(teamPlayedEl)
+  teamDivEl.appendChild(teamWonEl)
+  teamDivEl.appendChild(teamdrawEl)
+  teamDivEl.appendChild(teamlostEl)
+  teamDivEl.appendChild(teamGoalsForEl)
+  teamDivEl.appendChild(teamGoalsAgainstEl)
+  leagueDivEl.append(teamDivEl)
+
+  // Inject all data onto page
+  table.append(leagueDivEl)
 }

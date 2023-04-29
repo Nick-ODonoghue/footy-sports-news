@@ -150,3 +150,10 @@ button[type=submit] {
   font-weight: 600;
   background-color: white;
 }
+
+.team__form__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
