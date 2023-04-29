@@ -75,7 +75,7 @@ body {
 /* Search Bar */
 
 .form {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -237,13 +237,16 @@ button[type=submit] {
 .footer {
   position: fixed;
   bottom: 0;
+  /* padding: .3rem 0; */
   width: 100%;
   background-image: var(--yellow-gradient);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .breaking__news {
   background-image: var(--black-gradient);
-  color: white;
+  color: gold;
   padding: .5rem 1rem;
 }
