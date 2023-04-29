@@ -63,6 +63,7 @@ body {
 
 .brand__text--red {
   background-image: var(--red-gradient);
+  font-weight: 300;
 }
 
 .brand__text--white {
@@ -156,4 +157,47 @@ button[type=submit] {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+}
+
+/* league Table Section */
+
+.league__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.league__table {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.league__team__logo {
+  width: 20px;
+  height: 20px;
+}
+
+.league__team__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.league__team__name {
+  white-space: nowrap;
+}
+
+.league__teamStat__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-self: flex-end;
+}
+
+.league__team__text {
+  width: 11.2px;
 }
