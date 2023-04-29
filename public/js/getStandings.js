@@ -60,6 +60,7 @@ const leagueTable = (teams) => {
 
   // Extract data needed from teams parameter
   const logo = teams.team.logo
+  const rank = teams.rank
   const name = teams.team.name
   const played = teams.all.played
   const won = teams.all.win
@@ -78,6 +79,8 @@ const leagueTable = (teams) => {
   teamStatDivEl.classList.add('league__teamStat__container')
   const teamLogoEl = document.createElement('img')
   teamLogoEl.classList.add('league__team__logo')
+  const teamRankEl = document.createElement('p')
+  teamRankEl.classList.add('league__team__rank')
   const teamNameEl = document.createElement('h3')
   teamNameEl.classList.add('league__team__name')
   const teamPlayedEl = document.createElement('p')
@@ -98,6 +101,7 @@ const leagueTable = (teams) => {
 
   // Pass elements data
   teamLogoEl.src = logo
+  teamRankEl.innerHTML = rank
   teamNameEl.innerHTML = name
   teamPlayedEl.innerHTML = played
   teamWonEl.innerHTML = won
@@ -109,6 +113,7 @@ const leagueTable = (teams) => {
 
   // Inject elements into containers
   teamDivEl.appendChild(teamLogoEl)
+  teamDivEl.appendChild(teamRankEl)
   teamDivEl.appendChild(teamNameEl)
   teamStatDivEl.appendChild(teamPlayedEl)
   teamStatDivEl.appendChild(teamWonEl)
