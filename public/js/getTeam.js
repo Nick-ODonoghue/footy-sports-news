@@ -50,10 +50,10 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
 
   // Set new img elements src to logo URL passed in as an argument
   imgEl.src = teamLogo
-  countryEl.innerHTML = teamCountry
-  foundedEl.innerHTML = teamFounded
-  stadiumNameEl.innerHTML = teamStadiumName
-  stadiumCapacityEl.innerHTML = teamStadiumCapacity
+  countryEl.innerHTML = `Location - ${teamCountry}`
+  foundedEl.innerHTML = `Founded - ${teamFounded}`
+  stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
+  stadiumCapacityEl.innerHTML = `Capacity - ${teamStadiumCapacity}`
 
   // Inject logo into html
   logoSection.appendChild(imgEl)

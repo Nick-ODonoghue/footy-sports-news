@@ -14,7 +14,7 @@ export const getStandings = async (leagueID) => {
     const standings = league.standings
     standings.forEach((teamObj) => {
       teamObj.forEach((team) => {
-        setTeamForm(team)
+        // setTeamForm(team)
         leagueTable(team)
       })
     })
