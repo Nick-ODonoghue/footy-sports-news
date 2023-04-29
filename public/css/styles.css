@@ -7,6 +7,7 @@
 
   /* Colours */
   --site-bg: #eeeeee;
+  --white-gradient: linear-gradient(135deg, #ffffff, #eeeeee);
   --yellow-gradient: linear-gradient(135deg, #F0DD3E, #F6EB3A);
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
@@ -35,10 +36,16 @@ body {
   top: 0;
 }
 
+.header__container {
+  display: flex;
+  justify-content: center;
+}
+
 .title__container {
   color: white;
   font-weight: 600;
   padding: .5rem 1rem;
+  display: inline-block;
 }
 
 .brand__text {
@@ -47,7 +54,7 @@ body {
 
 .brand__text--blue {
   background-image: var(--blue-gradient);
-  width: 100%;
+  flex-grow: 1;
 }
 
 .brand__text--blue--align {
@@ -56,6 +63,12 @@ body {
 
 .brand__text--red {
   background-image: var(--red-gradient);
+}
+
+.brand__text--white {
+  background-image: var(--white-gradient);
+  color: #001f5e;
+  flex-grow: 1;
 }
 
 /* Search Bar */
