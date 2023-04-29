@@ -206,3 +206,19 @@ button[type=submit] {
 .league__team--bold {
   font-weight: 700;
 }
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-image: var(--yellow-gradient);
+  font-size: 1.6rem;
+}
+
+.breaking__news {
+  background-image: var(--black-gradient);
+  color: white;
+  padding: .5rem 1rem;
+}
