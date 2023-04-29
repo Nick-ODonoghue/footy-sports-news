@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
 
 :root {
 
@@ -188,7 +188,7 @@ button[type=submit] {
 }
 
 .league__team__name {
-  white-space: nowrap;
+  font-weight: 600;
 }
 
 .league__teamStat__container {
@@ -199,5 +199,10 @@ button[type=submit] {
 }
 
 .league__team__text {
+  font-weight: 300;
   width: 11.2px;
+}
+
+.league__team--bold {
+  font-weight: 700;
 }

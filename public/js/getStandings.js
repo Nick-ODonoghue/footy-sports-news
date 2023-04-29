@@ -65,6 +65,7 @@ const leagueTable = (teams) => {
   const won = teams.all.win
   const draw = teams.all.draw
   const lost = teams.all.lose
+  const points = teams.points
   const goalsFor = teams.all.goals.for
   const goalsAgainst = teams.all.goals.against
 
@@ -87,18 +88,22 @@ const leagueTable = (teams) => {
   teamdrawEl.classList.add('league__team__text')
   const teamlostEl = document.createElement('p')
   teamlostEl.classList.add('league__team__text')
+  const teamPointsEl = document.createElement('p')
+  teamPointsEl.classList.add('league__team__text')
+  teamPointsEl.classList.add('league__team--bold')
   const teamGoalsForEl = document.createElement('p')
   teamGoalsForEl.classList.add('league__team__text')
   const teamGoalsAgainstEl = document.createElement('p')
   teamGoalsAgainstEl.classList.add('league__team__text')
 
-  // Pass new elements data
+  // Pass elements data
   teamLogoEl.src = logo
   teamNameEl.innerHTML = name
   teamPlayedEl.innerHTML = played
   teamWonEl.innerHTML = won
   teamdrawEl.innerHTML = draw
   teamlostEl.innerHTML = lost
+  teamPointsEl.innerHTML = points
   teamGoalsForEl.innerHTML = goalsFor
   teamGoalsAgainstEl.innerHTML = goalsAgainst
 
@@ -109,6 +114,7 @@ const leagueTable = (teams) => {
   teamStatDivEl.appendChild(teamWonEl)
   teamStatDivEl.appendChild(teamdrawEl)
   teamStatDivEl.appendChild(teamlostEl)
+  teamStatDivEl.appendChild(teamPointsEl)
   teamStatDivEl.appendChild(teamGoalsForEl)
   teamStatDivEl.appendChild(teamGoalsAgainstEl)
   leagueDivEl.appendChild(teamDivEl)
