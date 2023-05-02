@@ -111,6 +111,7 @@ button[type=submit] {
   flex-direction: column;
   padding: 0 1rem;
   margin-top: 2rem;
+  width: fit-content;
 }
 
 .date__container {
