@@ -13,23 +13,29 @@ export const getTeams = async (teamName) => {
     const dataResponse = await response.json()
     console.log(`teamData from getTeam:`, dataResponse)
 
-    // Grabbing team ID of users input and passing as an argument into getLeague function
-    const teamID = dataResponse[0].team.id
+    // Destructure dataResponce array to grab the first element, as dataResponse could return more than one team
+    const [teamData] = dataResponse
+    console.log(`teamData:`, teamData)
 
+    // Destructure teamData object
+    const { team, venue } = teamData
+    console.log(`teamObj:`, team, `venueObj:`, venue)
+
+    // Grab team ID of users input and pass as an argument into getLeague function
+    const teamID = team.id
     getLeague(teamID)
+    console.log(`TeamID:`, teamID)
 
-    // Loop through the data
-    dataResponse.forEach((teams) => {
-      // Grab the team data needed
-      const teamLogo = teams.team.logo
-      const teamCountry = teams.team.country
-      const teamFounded = teams.team.founded
-      const teamStadiumName = teams.venue.name
-      const teamStadiumCapacity = teams.venue.capacity
+    // Grab the team data needed
+    const teamLogo = team.logo
+    const teamCountry = team.country
+    const teamFounded = team.founded
+    const teamStadiumName = venue.name
+    const teamStadiumCapacity = venue.capacity
 
-      // Pass the url to the setImage function
-      setTeamInfo(teamLogo, teamCountry, teamFounded, teamStadiumName, teamStadiumCapacity)
-    })
+    // Pass selected tead data into setTeamInfo function
+    setTeamInfo(teamLogo, teamCountry, teamFounded, teamStadiumName, teamStadiumCapacity)
+
   } catch (error) {
     console.error(error)
   }

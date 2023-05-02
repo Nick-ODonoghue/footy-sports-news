@@ -75,7 +75,7 @@ body {
 /* Search Bar */
 
 .form {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
@@ -83,7 +83,6 @@ body {
 input[type=text] {
   font-size: 1.6rem;
   padding: 1rem 1.4rem;
-  margin: 8px 0;
   border: 2px solid red;
   border-radius: .5rem;
 }
@@ -100,7 +99,6 @@ button[type=submit] {
   border: none;
   border-radius: .5rem;
   padding: 1rem 1.4rem;
-  margin: 8px 0;
   color: white;
 }
 
