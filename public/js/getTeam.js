@@ -1,4 +1,5 @@
 import { getLeague } from './getLeague.js'
+import { getSquad } from './getSquad.js'
 
 // Front-end async funtion calling the backend and passing users team as a parametor
 export const getTeams = async (teamName) => {
@@ -11,20 +12,20 @@ export const getTeams = async (teamName) => {
     // Send get request to my backend server
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(`teamData from getTeam:`, dataResponse)
+    // console.log(`teamData from getTeam:`, dataResponse)
 
     // Destructure dataResponce array to grab the first element, as dataResponse could return more than one team
     const [teamData] = dataResponse
-    console.log(`teamData:`, teamData)
+    // console.log(`teamData:`, teamData)
 
     // Destructure teamData object
     const { team, venue } = teamData
-    console.log(`teamObj:`, team, `venueObj:`, venue)
 
-    // Grab team ID of users input and pass as an argument into getLeague function
+    // Grab team ID of users input and pass as an argument into getLeague & getSquad functions
     const teamID = team.id
     getLeague(teamID)
-    console.log(`TeamID:`, teamID)
+    getSquad(teamID)
+    // console.log(`TeamID:`, teamID)
 
     // Grab the team data needed
     const teamLogo = team.logo

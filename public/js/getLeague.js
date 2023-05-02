@@ -10,7 +10,7 @@ export const getLeague = async (teamID) => {
 
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(`Data from getLeague:`, dataResponse)
+    // console.log(`Data from getLeague:`, dataResponse)
 
     // Set empty variable to hold the teams league ID
     let leagueID

@@ -16,7 +16,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Live Site
 
-[Footy Sports New](https://www.NickOD.xyz) - Coming soon
+[Footy Sports New](https://footy-sports-news.herokuapp.com/) - Still a work in progress
 
 <br>
 
@@ -43,12 +43,14 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
   - Main Content
   - Footer
 - API calls
+- Push to Heroku
 
 <br>
 
 ## Built with
 
 - Mobile first workflow
+  - Flexbox
   - Grid
 - Semantic HTML5 markup
 - CSS custom properties
@@ -60,6 +62,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
     - CORS
     - Dotenv
   - API fetch methods
+- Hosted on Heroku
 
 <br>
 

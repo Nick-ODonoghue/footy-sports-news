@@ -73,6 +73,7 @@ app.get('/league', async (req, res) => {
     const apiRes = await axios.request(options)
     const { response } = apiRes.data
     res.json(response)
+
   } catch (error) {
     console.error(error)
   }
@@ -103,9 +104,39 @@ app.get('/standings', async (req, res) => {
     const apiRes = await axios.request(options)
     const { response } = apiRes.data
     res.json(response)
+
   } catch (error) {
     console.error(error)
   }
+})
+
+// Set /squad route
+app.get('/squad', async (req, res) => {
+
+  // Grab query from the frontend function and pass as a param to the API call
+  const teamID = req.query.id
+  console.log(`Team ID: ${teamID}`)
+
+  const options = {
+    method: 'GET',
+    url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
+    params: { team: teamID },
+    headers: {
+      'X-RapidAPI-Key': API_KEY,
+      'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+    }
+  }
+
+  try {
+    const apiRes = await axios.request(options)
+    const { response } = apiRes.data
+    // console.log(response)
+    res.json(response)
+
+  } catch (error) {
+    console.error(error)
+  }
+
 })
 
 // Initiate the server to listen on our port
