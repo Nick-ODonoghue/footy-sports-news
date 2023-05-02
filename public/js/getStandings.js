@@ -12,6 +12,11 @@ export const getStandings = async (leagueID) => {
 
     const { league } = dataResponse[0]
     const standings = league.standings
+
+    // Clear all data from our league__table element incase the user does more than one search
+    const table = document.querySelector('.league__table')
+    table.innerHTML = ''
+
     standings.forEach((teamObj) => {
       teamObj.forEach((team) => {
         // setTeamForm(team)

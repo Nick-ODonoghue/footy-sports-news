@@ -62,6 +62,10 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
   stadiumCapacityEl.innerHTML = `Capacity - ${teamStadiumCapacity}`
 
+  // Clear all data for more than one user search
+  logoSection.innerHTML = ''
+  infoSection.innerHTML = ''
+
   // Inject data into html
   logoSection.appendChild(imgEl)
   infoSection.appendChild(countryEl)

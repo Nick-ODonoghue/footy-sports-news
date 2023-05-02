@@ -18,11 +18,7 @@ const app = express()
 app.use(cors())
 
 // Set up routes
-// Default route test
-// app.get('/', (req, res) => {
-//   res.json('Hi')
-// })
-
+// Point express to our public folder so it will then run index.html from there once the app is uploaded on Heroku
 app.use(express.static('public'))
 
 // Set / team route to store our response from the API allowing the frontend getTeams function to pull the response data
