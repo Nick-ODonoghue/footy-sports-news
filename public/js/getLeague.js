@@ -1,4 +1,5 @@
 import { getStandings } from './getStandings.js'
+
 // Front-end async funtion calling the backend and passing users teamID as a parametor
 export const getLeague = async (teamID) => {
   const url = new URL('http://localhost:5555/league')
@@ -9,9 +10,9 @@ export const getLeague = async (teamID) => {
 
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(dataResponse)
+    console.log(`Data from getLeague:`, dataResponse)
 
-    // Set empty variable to hole the teams league ID
+    // Set empty variable to hold the teams league ID
     let leagueID
 
     // Loop through the returned data

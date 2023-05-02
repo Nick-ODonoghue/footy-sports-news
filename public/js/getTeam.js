@@ -1,4 +1,5 @@
 import { getLeague } from './getLeague.js'
+
 // Front-end async funtion calling the backend and passing users team as a parametor
 export const getTeams = async (teamName) => {
   // Create a new instance of URL
@@ -10,7 +11,7 @@ export const getTeams = async (teamName) => {
     // Send get request to my backend server
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(dataResponse)
+    console.log(`teamData from getTeam:`, dataResponse)
 
     // Grabbing team ID of users input and passing as an argument into getLeague function
     const teamID = dataResponse[0].team.id
@@ -19,7 +20,7 @@ export const getTeams = async (teamName) => {
 
     // Loop through the data
     dataResponse.forEach((teams) => {
-      // Grab the teams logo url
+      // Grab the team data needed
       const teamLogo = teams.team.logo
       const teamCountry = teams.team.country
       const teamFounded = teams.team.founded
@@ -48,14 +49,14 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   const stadiumNameEl = document.createElement('p')
   const stadiumCapacityEl = document.createElement('p')
 
-  // Set new img elements src to logo URL passed in as an argument
+  // Push data into new elements
   imgEl.src = teamLogo
   countryEl.innerHTML = `Location - ${teamCountry}`
   foundedEl.innerHTML = `Founded - ${teamFounded}`
   stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
   stadiumCapacityEl.innerHTML = `Capacity - ${teamStadiumCapacity}`
 
-  // Inject logo into html
+  // Inject data into html
   logoSection.appendChild(imgEl)
   infoSection.appendChild(countryEl)
   infoSection.appendChild(foundedEl)

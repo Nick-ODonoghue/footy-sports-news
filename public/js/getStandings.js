@@ -8,7 +8,7 @@ export const getStandings = async (leagueID) => {
 
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(dataResponse)
+    console.log(`Data from getStandings:`, dataResponse)
 
     const { league } = dataResponse[0]
     const standings = league.standings

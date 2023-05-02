@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
   res.json('Hi')
 })
 
-// Set /team route to store our response from the API allowing the frontend getTeams function to pull the response data
+// Set / team route to store our response from the API allowing the frontend getTeams function to pull the response data
 app.get('/team', async (req, res) => {
 
   // Grab the users input to pass into our params
