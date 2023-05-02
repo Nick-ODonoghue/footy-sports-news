@@ -57,14 +57,14 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   const stadiumCapacityEl = document.createElement('p')
 
   // Push data into new elements
-  logoSection.src = teamLogo
+  logoSection.src = 'https://media-2.api-sports.io/football/teams/42.png'
   countryEl.innerHTML = `Location - ${teamCountry}`
   foundedEl.innerHTML = `Founded - ${teamFounded}`
   stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
   stadiumCapacityEl.innerHTML = `Capacity - ${teamStadiumCapacity}`
 
   // Clear all data for more than one user search
-  logoSection.innerHTML = ''
+  // logoSection.innerHTML = ''
   infoSection.innerHTML = ''
 
   // Inject data into html
