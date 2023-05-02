@@ -27,19 +27,41 @@ export const getSquad = async (teamID) => {
 const setPlayerCard = (players) => {
   // Grab DOM elements
   const squadSection = document.querySelector('.squad__container')
+  // Reset element in case user does more than one search
+  squadSection.innerHTML = ''
 
   players.forEach((player) => {
     console.log(player)
 
     // Create elements and add classes if needed
-    const nameEL = document.createElement('h3')
-    nameEL.classList.add('squad__player-name')
+    const playerCardEl = document.createElement('div')
+    playerCardEl.classList.add('squad__player-card')
+    const playerDataEl = document.createElement('div')
+    playerDataEl.classList.add('squad__player-data')
+    const nameEl = document.createElement('h3')
+    nameEl.classList.add('squad__player-name')
     const ageEl = document.createElement('p')
     ageEl.classList.add('squad__player-age')
     const positionEl = document.createElement('p')
     positionEl.classList.add('squad__player-position')
     const imgEl = document.createElement('img')
     imgEl.classList.add('squad__player-img')
+
+    // Push data into new elements
+    nameEl.innerHTML = player.name
+    ageEl.innerHTML = player.age
+    positionEl.innerHTML = player.position
+    imgEl.src = player.photo
+
+    // Push data into our squad__container element
+    playerDataEl.appendChild(nameEl)
+    playerDataEl.appendChild(ageEl)
+    playerDataEl.appendChild(positionEl)
+
+    playerCardEl.appendChild(imgEl)
+    playerCardEl.appendChild(playerDataEl)
+
+    squadSection.appendChild(playerCardEl)
 
   })
 
