@@ -49,15 +49,15 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   const infoSection = document.querySelector('.team__info')
 
   // Create new elements and set classes
-  const imgEl = document.createElement('img')
-  imgEl.classList.add('team__logo')
+  // const imgEl = document.createElement('img')
+  // imgEl.classList.add('team__logo')
   const countryEl = document.createElement('p')
   const foundedEl = document.createElement('p')
   const stadiumNameEl = document.createElement('p')
   const stadiumCapacityEl = document.createElement('p')
 
   // Push data into new elements
-  imgEl.src = teamLogo
+  logoSection.src = teamLogo
   countryEl.innerHTML = `Location - ${teamCountry}`
   foundedEl.innerHTML = `Founded - ${teamFounded}`
   stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
@@ -68,7 +68,7 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   infoSection.innerHTML = ''
 
   // Inject data into html
-  logoSection.appendChild(imgEl)
+  // logoSection.appendChild(imgEl)
   infoSection.appendChild(countryEl)
   infoSection.appendChild(foundedEl)
   infoSection.appendChild(stadiumNameEl)

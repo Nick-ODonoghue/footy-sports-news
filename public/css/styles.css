@@ -157,7 +157,7 @@ button[type=submit] {
   font-size: 1.1rem;
 }
 
-.team__logo {
+.team__logo-container {
   width: 85px;
   height: 85px;
 }
@@ -268,8 +268,12 @@ button[type=submit] {
   text-transform: uppercase;
 }
 
+.footer__container {
+  height: 2.1rem;
+}
+
 .breaking__news {
   background-image: var(--black-gradient);
   color: gold;
-  padding: .5rem 1rem;
+  padding: 0 1rem;
 }

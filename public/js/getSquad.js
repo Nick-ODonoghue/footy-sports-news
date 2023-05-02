@@ -61,7 +61,7 @@ const setPlayerCard = (players) => {
     playerCardEl.appendChild(imgEl)
     playerCardEl.appendChild(playerDataEl)
 
-    squadSection.appendChild(playerCardEl)
+    squadSection.append(playerCardEl)
 
   })
 
