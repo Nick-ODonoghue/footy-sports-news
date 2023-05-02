@@ -41,7 +41,7 @@ export const getTeams = async (teamName) => {
   }
 }
 
-// Function to inject team logo
+// Function to inject team data into team Info section of web app
 const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamStadiumCapacity) => {
   // Grab DOM elements
   const logoSection = document.querySelector('.team__logo')

@@ -2,7 +2,6 @@
 export const displayDate = () => {
 
   // Grab DOM elements
-  const timeEl = document.querySelector('.time')
   const ampmEl = document.querySelector('.ampm')
   const hourEl = document.querySelector('.hours')
   const minutesEl = document.querySelector('.minutes')

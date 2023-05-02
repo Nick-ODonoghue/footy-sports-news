@@ -19,9 +19,11 @@ app.use(cors())
 
 // Set up routes
 // Default route test
-app.get('/', (req, res) => {
-  res.json('Hi')
-})
+// app.get('/', (req, res) => {
+//   res.json('Hi')
+// })
+
+app.use(express.static('public'))
 
 // Set / team route to store our response from the API allowing the frontend getTeams function to pull the response data
 app.get('/team', async (req, res) => {
