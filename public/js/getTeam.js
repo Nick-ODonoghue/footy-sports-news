@@ -47,30 +47,34 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   // Grab DOM elements
   const logoSection = document.querySelector('.team__logo')
   const infoSection = document.querySelector('.team__info')
+  const teamLocation = document.querySelector('.team__location')
+  const teamFound = document.querySelector('.team__founded')
+  const teamStadium = document.querySelector('.team__stadium')
+  const teamCapacity = document.querySelector('.team__capacity')
 
   // Create new elements and set classes
   // const imgEl = document.createElement('img')
   // imgEl.classList.add('team__logo')
-  const countryEl = document.createElement('p')
-  const foundedEl = document.createElement('p')
-  const stadiumNameEl = document.createElement('p')
-  const stadiumCapacityEl = document.createElement('p')
+  // const countryEl = document.createElement('p')
+  // const foundedEl = document.createElement('p')
+  // const stadiumNameEl = document.createElement('p')
+  // const stadiumCapacityEl = document.createElement('p')
 
   // Push data into new elements
   logoSection.src = teamLogo
-  countryEl.innerText = `anything here`
-  foundedEl.innerHTML = `Founded - ${teamFounded}`
-  stadiumNameEl.innerHTML = `Ground - ${teamStadiumName}`
-  stadiumCapacityEl.innerHTML = `Capacity - ${teamStadiumCapacity}`
+  teamLocation.innerText = `Location - ${teamCountry}`
+  teamFound.innerText = `Founded - ${teamFounded}`
+  teamStadium.innerText = `Ground - ${teamStadiumName}`
+  teamCapacity.innerText = `Capacity - ${teamStadiumCapacity}`
 
   // Clear all data for more than one user search
-  logoSection.innerHTML = ''
-  infoSection.innerHTML = ''
+  // logoSection.innerText = ''
+  // infoSection.innerText = ''
 
   // Inject data into html
   // logoSection.appendChild(imgEl)
-  infoSection.appendChild(countryEl)
-  infoSection.appendChild(foundedEl)
-  infoSection.appendChild(stadiumNameEl)
-  infoSection.appendChild(stadiumCapacityEl)
+  // infoSection.appendChild(countryEl)
+  // infoSection.appendChild(foundedEl)
+  // infoSection.appendChild(stadiumNameEl)
+  // infoSection.appendChild(stadiumCapacityEl)
 }
