@@ -22,6 +22,12 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Sticking Points & What I learned
 
+- Routes & Routing
+
+  - Having got the app to work fine with all routes locally I then deployed my app to Heroku. However I soon discovered that my 'hard' coded url's ( const url = new URL('http://localhost:5555/team') ) were not going to work in production. It took me a while to figure out what the issue actually was, as Heroku logs didn't through up any errors for me to investigate. Once I finally ruled out a few different options I finally realised it was down to this url syntax. It took a few hours and multiple Heroku pushes but I finally found the solution in using ( const url = new URL('/team', window.location.href) ). This allowed my route to bind to the URL & port Heroku was using via my process.env.PORT in my index.js
+
+  - With this being my first node.js backend app, I really didn't know where to start. So had to think of some logical reasons and test every part of my code I thought maybe causing this issue. Whilst it was a lot of time spent, rewritting code and changing minor bits here and there it was a great experience for me to try my code in different ways. I really got to nail down some of the concepts and features of node, express etc that I wouldn't have had this not occured.
+
 - CORS
 
   - CORS is a security feature in web browsers that prevents cross-origin requests. To make API calls from a web app to a different domain, I created a backend server that acts as a proxy to the API server.
