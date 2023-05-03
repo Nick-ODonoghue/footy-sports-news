@@ -65,7 +65,7 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   teamLocation.innerText = `Location - ${teamCountry}`
   teamFound.innerText = `Founded - ${teamFounded}`
   teamStadium.innerText = `Ground - ${teamStadiumName}`
-  teamCapacity.innerText = `Capacity - ${teamStadiumCapacity}`
+  teamCapacity.innerHTML = teamStadiumCapacity
 
   // Clear all data for more than one user search
   // logoSection.innerText = ''
