@@ -9,7 +9,7 @@ require('dotenv').config()
 const API_KEY = process.env.API_KEY
 
 // Set port
-const PORT = process.env.PORT || 50101
+const PORT = process.env.PORT || 5555
 
 // Innitiate our express server
 const app = express()

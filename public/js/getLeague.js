@@ -2,7 +2,9 @@ import { getStandings } from './getStandings.js'
 
 // Front-end async funtion calling the backend and passing users teamID as a parametor
 export const getLeague = async (teamID) => {
-  const url = new URL('http://localhost:50101/league')
+  const url = new URL('/league', window.location.href)
+
+  // const url = new URL('/league')
   // Append users team ID that was pulled from getTeams function dataResponse
   url.searchParams.append('id', teamID)
 

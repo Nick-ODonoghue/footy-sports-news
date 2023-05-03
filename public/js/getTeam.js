@@ -4,7 +4,8 @@ import { getSquad } from './getSquad.js'
 // Front-end async funtion calling the backend and passing users team as a parametor
 export const getTeams = async (teamName) => {
   // Create a new instance of URL
-  const url = new URL('http://localhost:50101/team')
+  // const url = new URL('http://localhost:5555/team')
+  const url = new URL('/team', window.location.href)
   // Append users input to the URL object
   url.searchParams.append('name', teamName)
 
