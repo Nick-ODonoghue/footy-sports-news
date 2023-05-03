@@ -48,8 +48,8 @@ const setTeamForm = (teams) => {
   formEl.classList.add('team__form')
 
   // Pass new elements the data
-  nameEl.innerHTML = teamName
-  formEl.innerHTML = teamForm
+  nameEl.textContent = teamName
+  formEl.textContent = teamForm
 
   // Inject data elements into newly created div
   teamDivEl.appendChild(nameEl)
@@ -106,16 +106,16 @@ const leagueTable = (teams) => {
   teamGoalsAgainstEl.classList.add('league__team__text')
 
   // Pass elements data
-  teamLogoEl.src = logo
-  teamRankEl.innerHTML = rank
-  teamNameEl.innerHTML = name
-  teamPlayedEl.innerHTML = played
-  teamWonEl.innerHTML = won
-  teamdrawEl.innerHTML = draw
-  teamlostEl.innerHTML = lost
-  teamPointsEl.innerHTML = points
-  teamGoalsForEl.innerHTML = goalsFor
-  teamGoalsAgainstEl.innerHTML = goalsAgainst
+  teamLogoEl.setAttribute('src', logo)
+  teamRankEl.textContent = rank
+  teamNameEl.textContent = name
+  teamPlayedEl.textContent = played
+  teamWonEl.textContent = won
+  teamdrawEl.textContent = draw
+  teamlostEl.textContent = lost
+  teamPointsEl.textContent = points
+  teamGoalsForEl.textContent = goalsFor
+  teamGoalsAgainstEl.textContent = goalsAgainst
 
   // Inject elements into containers
   teamDivEl.appendChild(teamLogoEl)

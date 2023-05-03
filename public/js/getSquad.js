@@ -49,9 +49,9 @@ const setPlayerCard = (players) => {
     imgEl.classList.add('squad__player-img')
 
     // Push data into new elements
-    nameEl.innerHTML = player.name
-    ageEl.innerHTML = player.age
-    positionEl.innerHTML = player.position
+    nameEl.textContent = player.name
+    ageEl.textContent = player.age
+    positionEl.textContent = player.position
     imgEl.src = player.photo
 
     // Push data into our squad__container element
