@@ -1,6 +1,6 @@
 // Front-end async function calling our backend and passing the users teamID as a parameter
 export const getSquad = async (teamID) => {
-  const url = new URL('http://localhost:5555/squad')
+  const url = new URL('/squad')
   // Append teamID to URL object
   url.searchParams.append('id', teamID)
 
