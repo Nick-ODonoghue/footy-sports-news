@@ -46,36 +46,40 @@ export const getTeams = async (teamName) => {
 // Function to inject team data into team Info section of web app
 const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamStadiumCapacity) => {
   // Grab DOM elements
-  const teamLogoEl = document.querySelector('.team__logo')
-  // const infoSection = document.querySelector('.team__info')
-  const teamLocationEl = document.querySelector('.team__location')
-  const teamFoundEl = document.querySelector('.team__founded')
-  const teamStadiumEl = document.querySelector('.team__stadium')
-  const teamCapacityEl = document.querySelector('.team__capacity')
+  const teamLogoEl = document.querySelector('.team__logo-container')
+  const infoSectionEl = document.querySelector('.team__info-container')
+  // const teamLocationEl = document.querySelector('.team__location')
+  // const teamFoundEl = document.querySelector('.team__founded')
+  // const teamStadiumEl = document.querySelector('.team__stadium')
+  // const teamCapacityEl = document.querySelector('.team__capacity')
 
   // Create new elements and set classes
-  // const imgEl = document.createElement('img')
-  // imgEl.classList.add('team__logo')
-  // const countryEl = document.createElement('p')
-  // const foundedEl = document.createElement('p')
-  // const stadiumNameEl = document.createElement('p')
-  // const stadiumCapacityEl = document.createElement('p')
+  const imgEl = document.createElement('img')
+  imgEl.classList.add('team__logo')
+  const countryEl = document.createElement('p')
+  countryEl.classList.add('team__info-text')
+  const foundedEl = document.createElement('p')
+  foundedEl.classList.add('team__info-text')
+  const stadiumNameEl = document.createElement('p')
+  stadiumNameEl.classList.add('team__info-text')
+  const capacityEl = document.createElement('p')
+  capacityEl.classList.add('team__info-text')
 
   // Push data into new elements
-  teamLogoEl.setAttribute('src', teamLogo)
-  teamLocationEl.textContent = `Location - ${teamCountry}`
-  teamFoundEl.textContent = `Founded - ${teamFounded}`
-  teamStadiumEl.textContent = `Ground - ${teamStadiumName}`
-  teamCapacityEl.textContent = `Capacity - ${teamStadiumCapacity}`
+  imgEl.setAttribute('src', teamLogo)
+  countryEl.textContent = `Location - ${teamCountry}`
+  foundedEl.textContent = `Founded - ${teamFounded}`
+  stadiumNameEl.textContent = `Ground - ${teamStadiumName}`
+  capacityEl.textContent = `Capacity - ${teamStadiumCapacity}`
 
   // Clear all data for more than one user search
-  // logoSection.innerText = ''
-  // infoSection.innerText = ''
+  teamLogoEl.innerHTML = ''
+  infoSectionEl.innerHTML = ''
 
   // Inject data into html
-  // logoSection.appendChild(imgEl)
-  // infoSection.appendChild(countryEl)
-  // infoSection.appendChild(foundedEl)
-  // infoSection.appendChild(stadiumNameEl)
-  // infoSection.appendChild(stadiumCapacityEl)
+  teamLogoEl.append(imgEl)
+  infoSectionEl.appendChild(countryEl)
+  infoSectionEl.appendChild(foundedEl)
+  infoSectionEl.appendChild(stadiumNameEl)
+  infoSectionEl.appendChild(capacityEl)
 }
