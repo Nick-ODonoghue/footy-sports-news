@@ -45,12 +45,12 @@ export const getTeams = async (teamName) => {
 // Function to inject team data into team Info section of web app
 const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamStadiumCapacity) => {
   // Grab DOM elements
-  const logoSection = document.querySelector('.team__logo')
-  const infoSection = document.querySelector('.team__info')
-  const teamLocation = document.querySelector('.team__location')
-  const teamFound = document.querySelector('.team__founded')
-  const teamStadium = document.querySelector('.team__stadium')
-  const teamCapacity = document.querySelector('.team__capacity')
+  const teamLogoEl = document.querySelector('.team__logo')
+  // const infoSection = document.querySelector('.team__info')
+  const teamLocationEl = document.querySelector('.team__location')
+  const teamFoundEl = document.querySelector('.team__founded')
+  const teamStadiumEl = document.querySelector('.team__stadium')
+  const teamCapacityEl = document.querySelector('.team__capacity')
 
   // Create new elements and set classes
   // const imgEl = document.createElement('img')
@@ -61,11 +61,11 @@ const setTeamInfo = (teamLogo, teamCountry, teamFounded, teamStadiumName, teamSt
   // const stadiumCapacityEl = document.createElement('p')
 
   // Push data into new elements
-  logoSection.src = teamLogo
-  teamLocation.innerText = `Location - ${teamCountry}`
-  teamFound.innerText = `Founded - ${teamFounded}`
-  teamStadium.innerText = `Ground - ${teamStadiumName}`
-  teamCapacity.innerHTML = teamStadiumCapacity
+  teamLogoEl.setAttribute('src', teamLogo)
+  teamLocationEl.textContent = `Location - ${teamCountry}`
+  teamFoundEl.textContent = `Founded - ${teamFounded}`
+  teamStadiumEl.textContent = `Ground - ${teamStadiumName}`
+  teamCapacityEl.textContent = `Capacity - ${teamStadiumCapacity}`
 
   // Clear all data for more than one user search
   // logoSection.innerText = ''
