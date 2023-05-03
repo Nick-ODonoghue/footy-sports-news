@@ -9,7 +9,7 @@ export const getSquad = async (teamID) => {
 
     const response = await fetch(url.toString())
     const dataResponse = await response.json()
-    console.log(dataResponse)
+    // console.log(dataResponse)
 
     // Destructure the returned array
     const [squadData] = dataResponse
@@ -32,7 +32,7 @@ const setPlayerCard = (players) => {
   squadSection.innerHTML = ''
 
   players.forEach((player) => {
-    console.log(player)
+    // console.log(player)
 
     // Create elements and add classes if needed
     const playerCardEl = document.createElement('div')
@@ -50,9 +50,9 @@ const setPlayerCard = (players) => {
 
     // Push data into new elements
     nameEl.textContent = player.name
-    ageEl.textContent = player.age
+    ageEl.textContent = `Age: ${player.age}`
     positionEl.textContent = player.position
-    imgEl.src = player.photo
+    imgEl.setAttribute('src', player.photo)
 
     // Push data into our squad__container element
     playerDataEl.appendChild(nameEl)

@@ -239,7 +239,7 @@ button[type=submit] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
   padding-bottom: 2.5rem;
 }
