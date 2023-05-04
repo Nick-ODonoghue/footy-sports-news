@@ -28,6 +28,8 @@ export const getSquad = async (teamID) => {
 const setPlayerCard = (players) => {
   // Grab DOM elements
   const squadSection = document.querySelector('.squad__container')
+  const squadTitle = document.querySelector('.squad-heading')
+
   // Reset element in case user does more than one search
   squadSection.innerHTML = ''
 
@@ -49,6 +51,7 @@ const setPlayerCard = (players) => {
     imgEl.classList.add('squad__player-img')
 
     // Push data into new elements
+    squadTitle.textContent = 'Full Squad'
     nameEl.textContent = player.name
     ageEl.textContent = `Age: ${player.age}`
     positionEl.textContent = player.position

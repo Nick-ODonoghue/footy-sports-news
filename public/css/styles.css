@@ -31,6 +31,7 @@ body {
   position: relative;
   background-color: var(--site-bg);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 main {
@@ -92,7 +93,7 @@ main {
 /* Search Bar */
 
 .form {
-  margin-top: 2rem;
+  margin: 2rem 0;
   display: flex;
   gap: 1rem;
 }
@@ -259,14 +260,20 @@ button[type=submit] {
 
 /* Squad Section */
 
+.squad {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 19rem;
+}
+
 .squad__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
-  padding-bottom: 2.5rem;
 }
 
 .squad__player-card {
