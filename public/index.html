@@ -18,78 +18,84 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header__container">
-      <span class="title__container brand__text brand__text--blue brand__text--blue--align">footy</span>
-      <span class="title__container brand__text brand__text--red">sports</span>
-      <span class="title__container brand__text brand__text--white">news</span>
-    </div>
-  </header>
+  <!-- Site wrapper -->
+  <div class="wrapper">
 
-  <!-- Search Bar -->
-  <section class="form container">
-    <form id="form">
-      <input type="text" class="input" id="input" placeholder="Team Name...">
-      <button type="submit" class="btn" id="btn">Submit</button>
-    </form>
-  </section>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__container">
+        <span class="title__container brand__text brand__text--blue brand__text--blue--align">footy</span>
+        <span class="title__container brand__text brand__text--red">sports</span>
+        <span class="title__container brand__text brand__text--white">news</span>
+      </div>
+    </header>
 
-  <!-- Main Section -->
-  <main>
+    <!-- Search Bar -->
+    <section class="form container">
+      <form id="form">
+        <input type="text" class="input" id="input" placeholder="Team Name...">
+        <button type="submit" class="btn" id="btn">Submit</button>
+      </form>
+    </section>
 
-    <!-- Date & Time Section -->
-    <section class="container">
-      <div class="date">
-        <div class="date__container">
-          <span class="hours"></span>
-          <span class="minutes"></span>
-          <span class="ampm"></span>
+    <!-- Main Section -->
+    <main>
+
+      <!-- Date & Time Section -->
+      <section class="container">
+        <div class="date">
+          <div class="date__container">
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="ampm"></span>
+          </div>
+          <div class="date__container">
+            <span class="day"></span>
+            <span class="month"></span>
+            <span class="day__number"></span>
+          </div>
+          <div class="date__logo__container">
+            <div class="date__title__container date__text date__text--blue date__text--blue--align">footy</div>
+            <div class="date__title__container date__text date__text--red">sports</div>
+            <div class="date__title__container date__text date__text--white">news</div>
+          </div>
         </div>
-        <div class="date__container">
-          <span class="day"></span>
-          <span class="month"></span>
-          <span class="day__number"></span>
+      </section>
+
+      <!-- Team Info Section -->
+      <section class="team__info__container container">
+        <div class="team__logo-container">
         </div>
-        <div class="date__logo__container">
-          <div class="date__title__container date__text date__text--blue date__text--blue--align">footy</div>
-          <div class="date__title__container date__text date__text--red">sports</div>
-          <div class="date__title__container date__text date__text--white">news</div>
+        <div class="team__info-container">
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Team Info Section -->
-    <section class="team__info__container container">
-      <div class="team__logo-container">
-      </div>
-      <div class="team__info-container">
-      </div>
-    </section>
+      <!-- Team Form Section -->
+      <section class="team__form"></section>
 
-    <!-- Team Form Section -->
-    <section class="team__form"></section>
+      <!-- Team League Section -->
+      <section class="container">
+        <h3 class="league__table-heading"></h3>
+        <div class="league__table"></div>
+      </section>
 
-    <!-- Team League Section -->
-    <section class="container">
-      <h3 class="league__table-heading"></h3>
-      <div class="league__table"></div>
-    </section>
+      <!-- Team Squad Section -->
+      <section class="container">
+        <h3 class="squad-heading"></h3>
+        <div class="squad__container"></div>
+      </section>
 
-    <!-- Team Squad Section -->
-    <section class="container">
-      <h3 class="squad-heading"></h3>
-      <div class="squad__container"></div>
-    </section>
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer__container">
+          <marquee scrolldelay="125"><span class="breaking__news">breaking news</span> news feed to go here soon
+          </marquee>
+        </div>
+      </footer>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer__container">
-        <marquee scrolldelay="125"><span class="breaking__news">breaking news</span> news feed to go here soon</marquee>
-      </div>
-    </footer>
+    </main>
+  </div>
 
-  </main>
 </body>
 
 </html>

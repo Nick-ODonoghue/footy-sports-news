@@ -16,10 +16,27 @@
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  background-color: var(--site-bg);
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 /* Utilities */
+
+.wrapper {
+  width: min(95%, 108rem);
+  height: min(95%, 81rem);
+  position: relative;
+  background-color: var(--site-bg);
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  overflow-y: scroll;
+}
 
 .container {
   width: min(95%, 144rem);
@@ -258,7 +275,7 @@ button[type=submit] {
 /* Footer */
 
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   /* padding: .3rem 0; */
   width: 100%;
