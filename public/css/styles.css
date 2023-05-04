@@ -27,7 +27,7 @@ body {
 
 .wrapper {
   width: min(95%, 108rem);
-  height: min(95%, 81rem);
+  height: min(95%, 108rem);
   position: relative;
   background-color: var(--site-bg);
   overflow: hidden;
