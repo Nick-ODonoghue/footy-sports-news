@@ -63,6 +63,7 @@ const setTeamForm = (teams) => {
 const leagueTable = (teams) => {
   // Grab DOM element
   const table = document.querySelector('.league__table')
+  const tableTitle = document.querySelector('.league__table-heading')
 
   // Extract data needed from teams parameter
   const logo = teams.team.logo
@@ -107,6 +108,7 @@ const leagueTable = (teams) => {
 
   // Pass elements data
   teamLogoEl.setAttribute('src', logo)
+  tableTitle.textContent = 'League Table'
   teamRankEl.textContent = rank
   teamNameEl.textContent = name
   teamPlayedEl.textContent = played
