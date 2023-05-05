@@ -28,78 +28,74 @@
         <span class="title__container brand__text brand__text--red">sports</span>
         <span class="title__container brand__text brand__text--white">news</span>
       </div>
+
+      <!-- Search Bar -->
+      <div class="form">
+        <form id="form">
+          <input type="text" class="input" id="input" placeholder="Team Name...">
+          <button type="submit" class="btn" id="btn">Submit</button>
+        </form>
+      </div>
     </header>
 
-    <!-- Search Bar -->
-    <section class="form container">
-      <form id="form">
-        <input type="text" class="input" id="input" placeholder="Team Name...">
-        <button type="submit" class="btn" id="btn">Submit</button>
-      </form>
-    </section>
-
-    <!-- Main Section -->
-    <main>
-
+    <!-- Side Section -->
+    <div class="side">
       <!-- Date & Time Section -->
-      <section class="container">
-        <div class="date">
-          <div class="date__container">
-            <span class="hours"></span>
-            <span class="minutes"></span>
-            <span class="ampm"></span>
-          </div>
-          <div class="date__container">
-            <span class="day"></span>
-            <span class="month"></span>
-            <span class="day__number"></span>
-          </div>
-          <div class="date__logo__container">
-            <div class="date__title__container date__text date__text--blue date__text--blue--align">footy</div>
-            <div class="date__title__container date__text date__text--red">sports</div>
-            <div class="date__title__container date__text date__text--white">news</div>
-          </div>
+      <div class="date">
+        <div class="date__container">
+          <span class="hours"></span>
+          <span class="minutes"></span>
+          <span class="ampm"></span>
         </div>
-      </section>
+        <div class="date__container">
+          <span class="day"></span>
+          <span class="month"></span>
+          <span class="day__number"></span>
+        </div>
+        <div class="date__logo__container">
+          <div class="date__title__container date__text date__text--blue date__text--blue--align">footy</div>
+          <div class="date__title__container date__text date__text--red">sports</div>
+          <div class="date__title__container date__text date__text--white">news</div>
+        </div>
+      </div>
 
       <!-- Team Info Section -->
-      <div class="container">
-        <section class="team__info__container">
-          <div class="team__logo-container">
-          </div>
-          <div class="team__info-container">
-          </div>
-        </section>
-      </div>
-
-      <!-- Team Form Section -->
-      <section class="team__form"></section>
-
-      <!-- Team League Section -->
-      <div class="container">
-        <section class="league">
-          <h2 class="league__table-heading"></h2>
-          <div class="league__table"></div>
-        </section>
-      </div>
-
-      <!-- Team Squad Section -->
-      <div class="container">
-        <section class="squad">
-          <h2 class="squad-heading"></h2>
-          <div class="squad__container"></div>
-        </section>
-      </div>
-
-      <!-- Footer Section -->
-      <footer class="footer">
-        <div class="footer__container">
-          <marquee scrolldelay="125"><span class="breaking__news">breaking news</span> news feed to go here soon
-          </marquee>
+      <div class="team__info__container">
+        <div class="team__logo-container">
         </div>
-      </footer>
+        <div class="team__info-container">
+        </div>
+      </div>
 
-    </main>
+    </div>
+
+    <!-- Team Form Section -->
+    <!-- <section class="team__form"></section> -->
+
+    <!-- Team League Section -->
+    <div class="main">
+      <div class="league">
+        <h2 class="league__table-heading"></h2>
+        <div class="league__table"></div>
+      </div>
+    </div>
+
+    <!-- Team Squad Section -->
+    <div class="bottom">
+      <div class="squad">
+        <h2 class="squad-heading"></h2>
+        <div class="squad__container"></div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer__container">
+        <marquee scrolldelay="125"><span class="breaking__news">breaking news</span> news feed to go here soon
+        </marquee>
+      </div>
+    </footer>
+
   </div>
 
 </body>

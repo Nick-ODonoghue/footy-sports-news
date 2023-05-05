@@ -16,41 +16,24 @@
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  background-color: black;
+  background-color: var(--site-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  height: 100svh;
 }
-
-/* Utilities */
 
 .wrapper {
-  width: min(100%, 108rem);
-  height: min(100%, 108rem);
-  position: relative;
+  width: min(100%, 1080px);
+  height: min(100%, 1080px);
+  border: 1px solid red;
   background-color: var(--site-bg);
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-main {
-  height: 100%;
-  overflow-y: scroll;
-}
-
-.container {
-  width: min(95%, 144rem);
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  gap: 2rem;
 }
 
 /* Header / Title */
-
 .header {
+  background-color: var(--site-bg);
   position: sticky;
   top: 0;
 }
@@ -92,11 +75,10 @@ main {
 }
 
 /* Search Bar */
-
 .form {
-  margin: 2rem 0;
+  margin: 1rem 0;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
 }
 
 input[type=text] {
@@ -122,13 +104,18 @@ button[type=submit] {
   cursor: pointer;
 }
 
-/* Date Section */
+/* Side Section */
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+/* Date Section */
 .date {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
-  margin-top: 2rem;
+  justify-content: center;
 }
 
 .date__container {
@@ -164,13 +151,10 @@ button[type=submit] {
 }
 
 /* Team Info */
-
 .team__info__container {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
-  justify-content: flex-start;
   width: 100%;
 }
 
@@ -183,119 +167,8 @@ button[type=submit] {
   height: 85px;
 }
 
-/* Team Form Section */
-
-.team__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  /* align-items: center; */
-  gap: 1rem;
-}
-
-.team__form__container {
-  display: flex;
-  gap: 1rem;
-}
-
-/* league Table Section */
-
-.league {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  /* width: 100%; */
-}
-
-.league__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.league__table {
-  display: flex;
-  flex-direction: column;
-  gap: .1rem;
-}
-
-.league__team__logo {
-  width: 20px;
-  height: 20px;
-}
-
-.league__team__rank {
-  width: 1.2rem;
-  text-align: right;
-}
-
-.league__team__container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-}
-
-.league__team__name {
-  font-weight: 600;
-}
-
-.league__teamStat__container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-self: flex-end;
-}
-
-.league__team__text {
-  font-weight: 300;
-  width: 11.2px;
-}
-
-.league__team--bold {
-  font-weight: 700;
-}
-
-/* Squad Section */
-
-.squad {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-bottom: 19rem;
-}
-
-.squad__container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.squad__player-card {
-  display: flex;
-  gap: 1rem;
-  flex-basis: 45%;
-}
-
-.squad__player-img {
-  width: 50px;
-  height: 50px;
-}
-
 /* Footer */
-
 .footer {
-  position: absolute;
-  bottom: 0;
-  /* padding: .3rem 0; */
-  width: 100%;
   background-image: var(--yellow-gradient);
   font-size: 1.4rem;
   font-weight: 600;
