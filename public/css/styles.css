@@ -167,6 +167,97 @@ button[type=submit] {
   height: 85px;
 }
 
+/* league Table Section */
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.league {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: max-content;
+}
+
+.league__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.league__table {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.league__team__logo {
+  width: 20px;
+  height: 20px;
+}
+
+.league__team__rank {
+  width: 1.2rem;
+  text-align: right;
+}
+
+.league__team__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.league__team__name {
+  font-weight: 600;
+}
+
+.league__teamStat__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-self: flex-end;
+}
+
+.league__team__text {
+  font-weight: 300;
+  width: 11.2px;
+}
+
+.league__team--bold {
+  font-weight: 700;
+}
+
+/* Squad Section */
+.squad {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.squad__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.squad__player-card {
+  display: flex;
+  gap: 1rem;
+  flex-basis: 45%;
+}
+
+.squad__player-img {
+  width: 50px;
+  height: 50px;
+}
+
 /* Footer */
 .footer {
   background-image: var(--yellow-gradient);
