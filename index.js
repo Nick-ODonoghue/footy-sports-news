@@ -3,6 +3,8 @@
 const express = require('express')
 const cors = require('cors')
 const axios = require('axios')
+const rateLimit = require('express-rate-limit')
+const apicache = require('apicache')
 require('dotenv').config()
 
 // Store API key via dotenv package required above
@@ -14,15 +16,26 @@ const PORT = process.env.PORT || 5555
 // Innitiate our express server
 const app = express()
 
+// Set up rate limiting
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 40
+})
+app.use(limiter)
+app.set('trust proxy, 1')
+
 // Enable CORS to prevent any issues
 app.use(cors())
+
+// Innitialize cache
+let cache = apicache.middleware
 
 // Set up routes
 // Point express to our public folder so it will then run index.html from there once the app is uploaded on Heroku
 app.use(express.static('public'))
 
 // Set / team route to store our response from the API allowing the frontend getTeams function to pull the response data
-app.get('/team', async (req, res) => {
+app.get('/team', cache('1440 minutes'), async (req, res) => {
 
   // Grab the users input to pass into our params
   const usersTeam = req.query.name
@@ -52,7 +65,7 @@ app.get('/team', async (req, res) => {
 })
 
 // Set /league route to store our response from the API allowing the frontend getLeague function to pull the response data
-app.get('/league', async (req, res) => {
+app.get('/league', cache('1440 minutes'), async (req, res) => {
 
   // Grab query from the frontend function and pass as a param to the API call
   const teamID = req.query.id
@@ -80,7 +93,7 @@ app.get('/league', async (req, res) => {
 })
 
 // Set /standings route
-app.get('/standings', async (req, res) => {
+app.get('/standings', cache('1440 minutes'), async (req, res) => {
 
   // Grab query from the frontend function and pass as a param to the API call
   const leagueID = req.query.id
@@ -111,7 +124,7 @@ app.get('/standings', async (req, res) => {
 })
 
 // Set /squad route
-app.get('/squad', async (req, res) => {
+app.get('/squad', cache('1440 minutes'), async (req, res) => {
 
   // Grab query from the frontend function and pass as a param to the API call
   const teamID = req.query.id
