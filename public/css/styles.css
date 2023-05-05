@@ -20,22 +20,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100svh;
 }
 
 .wrapper {
-  width: min(100%, 1080px);
-  height: min(100%, 1080px);
-  /* border: 1px solid red; */
-  background-color: var(--site-bg);
+  width: min(95%, 1080px);
+  height: min(95%, 1080px);
+  border: 1px solid red;
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
+  grid-template-columns: 8fr 4fr;
+  grid-template-rows: 2fr 8fr 1fr 22px;
+  overflow: hidden;
+  position: absolute;
 }
 
-/* Header / Title */
 .header {
-  background-color: var(--site-bg);
-  position: sticky;
-  top: 0;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
 }
 
 .header__container {
@@ -104,74 +110,12 @@ button[type=submit] {
   cursor: pointer;
 }
 
-/* Side Section */
-.side {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* Date Section */
-.date {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.date__container {
-  color: #001f5e;
-}
-
-.date__logo__container {
-  display: flex;
-  flex-direction: row;
-}
-
-.date__title__container {
-  display: flex;
-  flex-direction: row;
-  padding: 0 .2rem;
-}
-
-.date__text--blue {
-  color: #001f5e;
-  font-weight: 600;
-  padding-left: 0;
-}
-
-.date__text--red {
-  color: white;
-  background-image: var(--red-gradient);
-}
-
-.date__text--white {
-  color: #001f5e;
-  font-weight: 600;
-  background-color: white;
-}
-
-/* Team Info */
-.team__info__container {
+.main {
+  background-color: lightcoral;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-
-.team__info {
-  font-size: 1.1rem;
-}
-
-.team__logo-container {
-  width: 85px;
-  height: 85px;
-}
-
-/* league Table Section */
-
-.main {
-  display: flex;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .league {
@@ -232,42 +176,132 @@ button[type=submit] {
   font-weight: 700;
 }
 
-/* Squad Section */
-.squad {
+.side {
+  background-color: lightgoldenrodyellow;
   display: flex;
   flex-direction: column;
+  align-self: start;
+  justify-content: center;
+  grid-row: span 2;
+  gap: 2rem;
+}
+
+/* Date Section */
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date__container {
+  color: #001f5e;
+}
+
+.date__logo__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.date__title__container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 .2rem;
+}
+
+.date__text--blue {
+  color: #001f5e;
+  font-weight: 600;
+  padding-left: 0;
+}
+
+.date__text--red {
+  color: white;
+  background-image: var(--red-gradient);
+}
+
+.date__text--white {
+  color: #001f5e;
+  font-weight: 600;
+  background-color: white;
+}
+
+/* Team Info */
+.team__info__container {
+  display: flex;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
+}
+
+.team__info {
+  font-size: 1.1rem;
+}
+
+.team__logo-container {
+  width: 85px;
+  height: 85px;
+}
+
+.bottom {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;
+  align-self: end;
+}
+
+.squad {
+  display: flex;
+  align-items: center;
 }
 
 .squad__container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .squad__player-card {
+  border-radius: 5px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  flex-basis: 45%;
+  background-color: white;
+  padding-left: 1rem;
+  /* width: 100%; */
+}
+
+.squad__player-data {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  height: 100%;
+  padding-right: 1rem;
 }
 
 .squad__player-img {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
 }
 
-/* Footer */
 .footer {
   background-image: var(--yellow-gradient);
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+  align-self: end;
 }
 
 .footer__container {
-  height: 2.1rem;
+  /* height: 2.1rem; */
 }
 
 .breaking__news {
