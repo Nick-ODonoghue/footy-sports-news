@@ -12,6 +12,7 @@
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
   --red-gradient: linear-gradient(135deg, #f03548, #ca0014);
+  --side-gradient: linear-gradient(90deg, #ebebeb, #eeeeee);
 }
 
 body {
@@ -27,15 +28,13 @@ body {
   width: min(95%, 1080px);
   height: min(95%, 1080px);
   display: grid;
-  gap: 1.5rem;
   grid-template-columns: 8fr 4fr;
-  grid-template-rows: 2fr 7fr 2fr 22px;
+  grid-template-rows: 1fr 5fr 1fr 22px;
   overflow: hidden;
   position: absolute;
 }
 
 .header {
-  background-color: lightblue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +109,6 @@ button[type=submit] {
 }
 
 .main {
-  background-color: lightcoral;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,20 +174,18 @@ button[type=submit] {
 }
 
 .side {
-  background-color: lightgoldenrodyellow;
   display: flex;
   flex-direction: column;
-  align-self: start;
-  justify-content: center;
   grid-row: span 2;
   gap: 2rem;
+  background-image: var(--side-gradient);
+  height: 100%;
 }
 
 /* Date Section */
 .date {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .date__container {
@@ -228,6 +224,7 @@ button[type=submit] {
 .team__info__container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
 }
@@ -242,7 +239,6 @@ button[type=submit] {
 }
 
 .bottom {
-  background-color: lightgray;
   display: flex;
   align-items: center;
   overflow-y: scroll;
@@ -286,16 +282,6 @@ button[type=submit] {
   width: 150px;
   background-color: white;
   padding: 0 1rem;
-}
-
-.squad__player-data {
-  /* border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  height: 100%;
-  padding-right: 1rem; */
 }
 
 .squad__player-img {
