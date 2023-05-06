@@ -17,12 +17,12 @@ const PORT = process.env.PORT || 5555
 const app = express()
 
 // Set up rate limiting
-// const limiter = rateLimit({
-//   windowMs: 10 * 60 * 1000,
-//   max: 40
-// })
-// app.use(limiter)
-// app.set('trust proxy, 1')
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 40
+})
+app.use(limiter)
+app.set('trust proxy, 1')
 
 // Enable CORS to prevent any issues
 app.use(cors())

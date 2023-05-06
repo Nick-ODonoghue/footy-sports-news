@@ -29,9 +29,12 @@ const setPlayerCard = (players) => {
   // Grab DOM elements
   const squadSection = document.querySelector('.squad__container')
   const squadTitle = document.querySelector('.squad-heading')
+  const squadHidden = document.querySelector('.squad__heading-container')
 
   // Reset element in case user does more than one search
   squadSection.innerHTML = ''
+
+  squadHidden.classList.remove('hidden')
 
   players.forEach((player) => {
     // console.log(player)

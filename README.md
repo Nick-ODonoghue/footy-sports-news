@@ -1,6 +1,6 @@
 <h1 align="center">Footy Sports News | NickOD.xyz</h1>
 
-![Screenshot of site - COMING]()
+![Screenshot of site](./public/images/Footy-Sports-News.jpg)
 
 <br>
 
@@ -40,16 +40,18 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Site To-Do
 
-- Decide on data and information to be displayed in the GUI
 - Style for mobile uses
-- Style for large screen users
+- Create autoscroll for squad
+- Scrap live data for breaking news
+- DONE - Decide on data and information to be displayed in the GUI
+- DONE - Style for large screen users
 - Sections:
-  - Header
-  - Search Box
-  - Main Content
-  - Footer
-- API calls
-- Push to Heroku
+  - DONE - Header
+  - DONE - Search Box
+  - DONE - Main Content
+  - DONE - Footer
+- DONE - API calls
+- DONE - Push to Heroku
 
 <br>
 

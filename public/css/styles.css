@@ -294,6 +294,10 @@ button[type=submit] {
   height: 45px;
 }
 
+.hidden {
+  display: none;
+}
+
 .footer {
   background-image: var(--yellow-gradient);
   font-size: 1.4rem;
