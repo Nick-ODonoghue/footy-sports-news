@@ -12,7 +12,8 @@
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
   --red-gradient: linear-gradient(135deg, #f03548, #ca0014);
-  --side-gradient: linear-gradient(90deg, #ebebeb, #eeeeee);
+  --side-gradient: linear-gradient(135deg, #ebebeb, #eeeeee);
+  --bottom-gradient: linear-gradient(135deg, #ebebeb, #eeeeee);
 }
 
 body {
@@ -226,7 +227,6 @@ button[type=submit] {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
 }
 
 .team__info {
@@ -239,6 +239,7 @@ button[type=submit] {
 }
 
 .bottom {
+  background-image: var(--bottom-gradient);
   display: flex;
   align-items: center;
   overflow-y: scroll;
@@ -269,7 +270,7 @@ button[type=submit] {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .squad__player-card {
@@ -285,8 +286,8 @@ button[type=submit] {
 }
 
 .squad__player-img {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
 }
 
 .footer {
