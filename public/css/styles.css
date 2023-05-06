@@ -26,11 +26,10 @@ body {
 .wrapper {
   width: min(95%, 1080px);
   height: min(95%, 1080px);
-  border: 1px solid red;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 8fr 4fr;
-  grid-template-rows: 2fr 8fr 1fr 22px;
+  grid-template-rows: 2fr 7fr 2fr 22px;
   overflow: hidden;
   position: absolute;
 }
@@ -253,6 +252,21 @@ button[type=submit] {
 .squad {
   display: flex;
   align-items: center;
+  padding: .5rem 0;
+}
+
+.squad__heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 200px;
+  margin-right: 1rem;
+  background-color: pink;
+}
+
+.squad-heading {
+  white-space: nowrap;
 }
 
 .squad__container {
@@ -268,19 +282,20 @@ button[type=submit] {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  height: 100px;
+  width: 150px;
   background-color: white;
-  padding-left: 1rem;
-  /* width: 100%; */
+  padding: 0 1rem;
 }
 
 .squad__player-data {
-  border-radius: 5px;
+  /* border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: white;
   height: 100%;
-  padding-right: 1rem;
+  padding-right: 1rem; */
 }
 
 .squad__player-img {
@@ -298,10 +313,6 @@ button[type=submit] {
   justify-content: center;
   grid-column: span 2;
   align-self: end;
-}
-
-.footer__container {
-  /* height: 2.1rem; */
 }
 
 .breaking__news {
