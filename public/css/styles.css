@@ -318,6 +318,10 @@ button[type=submit] {
   grid-area: footer;
 }
 
+.footer__container {
+  height: 21.333px;
+}
+
 .breaking__news {
   background-image: var(--black-gradient);
   color: gold;
