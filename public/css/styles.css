@@ -12,8 +12,7 @@
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
   --red-gradient: linear-gradient(135deg, #f03548, #ca0014);
-  --side-gradient: linear-gradient(135deg, #ebebeb, #eeeeee);
-  --bottom-gradient: linear-gradient(135deg, #ebebeb, #eeeeee);
+  --site-gradient: linear-gradient(135deg, #dcdcdc, #eeeeee);
 }
 
 body {
@@ -29,6 +28,8 @@ body {
   width: min(95%, 1080px);
   height: min(95%, 1080px);
   display: grid;
+  grid-template-rows: auto;
+  align-content: start;
   grid-auto-columns: 1fr;
   grid-template-areas:
     'header'
@@ -46,6 +47,7 @@ body {
   align-items: center;
   justify-content: center;
   grid-area: header;
+  /* background-image: var(--site-gradient); */
 }
 
 .header__container {
@@ -120,6 +122,7 @@ button[type=submit] {
   justify-content: center;
   padding-bottom: 120px;
   grid-area: main;
+  background-image: var(--site-gradient);
 }
 
 .league {
@@ -185,7 +188,7 @@ button[type=submit] {
   flex-direction: column;
   grid-row: span 2;
   gap: 2rem;
-  background-image: var(--side-gradient);
+  background-image: var(--site-gradient);
   height: 100%;
   grid-area: side;
 }
@@ -246,7 +249,7 @@ button[type=submit] {
 }
 
 .bottom {
-  background-image: var(--bottom-gradient);
+  background-image: var(--site-gradient);
   display: flex;
   align-items: center;
   overflow-y: scroll;
