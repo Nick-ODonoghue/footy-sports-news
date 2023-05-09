@@ -29,9 +29,17 @@ body {
   width: min(95%, 1080px);
   height: min(95%, 1080px);
   display: grid;
-  grid-template-columns: 8fr 4fr;
-  grid-template-rows: 1fr 5fr 1fr 22px;
-  overflow: hidden;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'side'
+    'main'
+    'bottom'
+    'footer'
+  ;
+  /* grid-template-columns: 8fr 4fr;
+  grid-template-rows: 1fr 5fr 1fr 22px; */
+  /* overflow: hidden; */
   position: absolute;
 }
 
@@ -40,7 +48,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-column: span 2;
+  /* grid-column: span 2; */
+  grid-area: header;
 }
 
 .header__container {
@@ -113,7 +122,9 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  padding-bottom: 120px;
+  grid-area: main;
 }
 
 .league {
@@ -181,6 +192,7 @@ button[type=submit] {
   gap: 2rem;
   background-image: var(--side-gradient);
   height: 100%;
+  grid-area: side;
 }
 
 /* Date Section */
@@ -244,6 +256,7 @@ button[type=submit] {
   align-items: center;
   overflow-y: scroll;
   align-self: end;
+  grid-area: bottom;
 }
 
 .squad {
@@ -306,12 +319,60 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  grid-column: span 2;
+  /* grid-column: span 2; */
   align-self: end;
+  grid-area: footer;
 }
 
 .breaking__news {
   background-image: var(--black-gradient);
   color: gold;
   padding: 0 1rem;
+}
+
+@media(min-width:768px) {
+
+  .wrapper {
+    width: min(95%, 1080px);
+    height: min(95%, 1080px);
+    display: grid;
+    grid-template-areas:
+      'header   header  header'
+      'main     main    side'
+      'main     main    side'
+      'bottom   bottom  bottom'
+      'footer   footer  footer'
+    ;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* grid-column: span 2; */
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    padding-bottom: 0;
+  }
+
+  .footer {
+    background-image: var(--yellow-gradient);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-column: span 2; */
+    align-self: end;
+  }
+
 }
