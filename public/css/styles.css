@@ -314,7 +314,7 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: end;
+  align-self: start;
   grid-area: footer;
 }
 
@@ -339,10 +339,12 @@ button[type=submit] {
       'footer   footer  footer'
     ;
     overflow: hidden;
+    grid-template-rows: auto;
   }
 
   .main {
     padding-bottom: 0;
+    overflow-y: scroll;
   }
 
 }
