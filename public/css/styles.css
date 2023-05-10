@@ -323,13 +323,29 @@ button[type=submit] {
 }
 
 .footer__container {
-  height: 21.333px;
+  overflow-x: hidden;
 }
 
 .breaking__news {
   background-image: var(--black-gradient);
   color: gold;
   padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+.newsfeed {
+  white-space: nowrap;
+  animation: marquee 100s infinite linear;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-1050%);
+  }
 }
 
 @media(min-width:768px) {

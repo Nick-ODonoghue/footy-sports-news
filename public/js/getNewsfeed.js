@@ -18,5 +18,24 @@ export const newsFeed = async () => {
 
 // Function to inject news articles into our breaking news footer
 const setNewsFeed = (articles) => {
+  // Grab DOM element
+  const newsFeedContainer = document.querySelector('.newsfeed')
+  console.log(newsFeedContainer)
+  articles.forEach((article) => {
 
+    // Create elements and add classes
+    const breakingEl = document.createElement('span')
+    breakingEl.classList.add('breaking__news')
+    const newsFeedEl = document.createElement('span')
+    newsFeedEl.classList.add('newsfeed__txt')
+
+    // Push our data into the new elements
+    breakingEl.textContent = 'breaking news'
+    newsFeedEl.textContent = article.title
+
+    // Push elements into our marquee
+    newsFeedContainer.appendChild(breakingEl)
+    newsFeedContainer.appendChild(newsFeedEl)
+
+  })
 }
