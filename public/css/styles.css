@@ -115,10 +115,12 @@ button[type=submit] {
   cursor: pointer;
 }
 
+/* Main Section */
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
   padding-bottom: 120px;
   grid-area: main;
   background-image: var(--site-gradient);
@@ -182,6 +184,7 @@ button[type=submit] {
   font-weight: 700;
 }
 
+/* Sidebar Section */
 .side {
   display: flex;
   flex-direction: column;
@@ -190,6 +193,7 @@ button[type=submit] {
   background-image: var(--site-gradient);
   height: 100%;
   grid-area: side;
+  padding: 1rem 0;
 }
 
 /* Date Section */
@@ -265,8 +269,8 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
   width: 200px;
+  padding: 2.8rem 0;
   border-radius: 5px;
   margin-right: 1rem;
   background-image: var(--red-gradient);
@@ -292,10 +296,9 @@ button[type=submit] {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  height: 100px;
   width: 150px;
   background-color: white;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .squad__player-img {
@@ -342,7 +345,7 @@ button[type=submit] {
   }
 
   .main {
-    padding-bottom: 0;
+    padding: 1rem 0;
     overflow-y: scroll;
   }
 
