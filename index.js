@@ -185,7 +185,7 @@ axios(url)
       })
     })
     // console.log(newsFeed)
-  })
+  }).catch(error => console.log(error))
 
 // Initiate the server to listen on our port
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
