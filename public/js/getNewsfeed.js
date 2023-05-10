@@ -20,7 +20,10 @@ export const newsFeed = async () => {
 const setNewsFeed = (articles) => {
   // Grab DOM element
   const newsFeedContainer = document.querySelector('.newsfeed')
-  console.log(newsFeedContainer)
+  // console.log(newsFeedContainer)
+
+  let totalWidth = 0
+
   articles.forEach((article) => {
 
     // Create elements and add classes
@@ -37,5 +40,11 @@ const setNewsFeed = (articles) => {
     newsFeedContainer.appendChild(breakingEl)
     newsFeedContainer.appendChild(newsFeedEl)
 
+    // To fix the issue I'm having with the newsFeed only scrolling as much data as the width of the newsFeed element I'm applying the entire width of all news articles to the newsFeedContainer element
+    totalWidth += breakingEl.offsetWidth + newsFeedEl.offsetWidth
+
   })
+
+  newsFeedContainer.style.width = totalWidth + 'px'
+
 }

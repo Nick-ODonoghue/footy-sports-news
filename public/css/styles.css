@@ -320,10 +320,12 @@ button[type=submit] {
   justify-content: center;
   align-self: start;
   grid-area: footer;
+  overflow-x: hidden;
 }
 
 .footer__container {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  height: 21.333px;
 }
 
 .breaking__news {
@@ -335,16 +337,16 @@ button[type=submit] {
 
 .newsfeed {
   white-space: nowrap;
-  animation: marquee 100s infinite linear;
+  animation: marquee 150s infinite linear;
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
   }
 
   100% {
-    transform: translateX(-1050%);
+    transform: translateX(-60%);
   }
 }
 
@@ -363,6 +365,21 @@ button[type=submit] {
   .main {
     padding: 1rem 0;
     overflow-y: scroll;
+  }
+
+  .newsfeed {
+    white-space: nowrap;
+    animation: marquee 100s infinite linear;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(55%);
+    }
+
+    100% {
+      transform: translateX(-60%);
+    }
   }
 
 }
