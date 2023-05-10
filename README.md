@@ -16,7 +16,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Live Site
 
-[Footy Sports New](https://footy-sports-news.herokuapp.com/) - Still a work in progress
+[Footy Sports News](https://footy-sports-news.herokuapp.com/) - Still a work in progress
 
 <br>
 
@@ -40,7 +40,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
 
 ## Site To-Do
 
-- Style for mobile uses
+- DONE - Style for mobile uses
 - Create autoscroll for squad
 - Scrap live data for breaking news
 - DONE - Decide on data and information to be displayed in the GUI
@@ -50,6 +50,7 @@ As I can't expose my API key in the frontend of my app, I've built a node.js bac
   - DONE - Search Box
   - DONE - Main Content
   - DONE - Footer
+  - Decide on more data to add to sidebar
 - DONE - API calls
 - DONE - Push to Heroku
 
