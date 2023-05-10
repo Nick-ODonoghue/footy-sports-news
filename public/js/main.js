@@ -16,7 +16,7 @@ search.addEventListener("submit", (e) => {
 
   // Call GetTeams function and pass user input as argument
   getTeams(teamName)
-  newsFeed()
 })
 
+newsFeed()
 setInterval(displayDate, 10)
