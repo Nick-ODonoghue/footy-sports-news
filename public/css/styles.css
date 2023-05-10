@@ -259,6 +259,10 @@ button[type=submit] {
   grid-area: bottom;
 }
 
+.bottom::-webkit-scrollbar {
+  display: none;
+}
+
 .squad {
   display: flex;
   align-items: center;
@@ -323,6 +327,10 @@ button[type=submit] {
   overflow-x: hidden;
 }
 
+.footer::-webkit-scrollbar {
+  display: none;
+}
+
 .footer__container {
   /* overflow-x: hidden; */
   height: 21.333px;
@@ -365,6 +373,10 @@ button[type=submit] {
   .main {
     padding: 1rem 0;
     overflow-y: scroll;
+  }
+
+  .main::-webkit-scrollbar {
+    display: none;
   }
 
   .newsfeed {
