@@ -12,7 +12,7 @@
   --black-gradient: linear-gradient(135deg, #3B3E46, #121214);
   --blue-gradient: linear-gradient(135deg, #153f92, #001f5e);
   --red-gradient: linear-gradient(135deg, #f03548, #ca0014);
-  --site-gradient: linear-gradient(135deg, #dcdcdc, #eeeeee);
+  --site-gradient: linear-gradient(135deg, #cccccc, #eeeeee);
 }
 
 body {
@@ -47,7 +47,6 @@ body {
   align-items: center;
   justify-content: center;
   grid-area: header;
-  /* background-image: var(--site-gradient); */
 }
 
 .header__container {
@@ -249,7 +248,6 @@ button[type=submit] {
 }
 
 .bottom {
-  background-image: var(--site-gradient);
   display: flex;
   align-items: center;
   overflow-y: scroll;
@@ -341,8 +339,6 @@ button[type=submit] {
       'bottom   bottom  bottom'
       'footer   footer  footer'
     ;
-    overflow: hidden;
-    grid-template-rows: auto;
   }
 
   .main {
