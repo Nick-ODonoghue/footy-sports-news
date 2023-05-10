@@ -5,6 +5,7 @@ const cors = require('cors')
 const axios = require('axios')
 const rateLimit = require('express-rate-limit')
 const apicache = require('apicache')
+const cheerio = require('cheerio')
 require('dotenv').config()
 
 // Store API key via dotenv package required above
@@ -151,6 +152,40 @@ app.get('/squad', cache('1440 minutes'), async (req, res) => {
   }
 
 })
+
+// Cheerio scrapper set up
+const url = 'https://www.skysports.com/football/news'
+
+// Pass axios our URL
+axios(url)
+  .then(response => {
+    // Grab the response data and save to our html variable
+    const html = response.data
+    // console.log(html)
+
+    // Load our html variable into cheerio and save to $
+    const $ = cheerio.load(html)
+    // console.log($)
+
+    // Create empty array to hold our returned data
+    const newsFeed = []
+
+    // Pass the class we're searching for, for cheerio to extract, and loop through each element found
+    $('.news-list__headline-link', html).each(function () {
+      // Grab the text within each element and remove the whitespace
+      const title = $(this).text().trim()
+      // Grad the url of each element
+      const url = $(this).attr('href')
+      // console.log(title, url)
+
+      // Push the results into our newsFeed array
+      newsFeed.push({
+        title,
+        url
+      })
+    })
+    // console.log(newsFeed)
+  })
 
 // Initiate the server to listen on our port
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
